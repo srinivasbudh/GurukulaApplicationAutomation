@@ -14,5 +14,9 @@ Feature:  Authenticate valid users into the application
     When User authenticate with admin as login, admin as password and don't Remember Login option
     Then user is authenticated into the application
 
-
+  @VerifyLogoutFromApplication
+  Scenario: Verify Logout from the application and Database is not accessible
+    Given User is Logged in into the application
+    When Users Logout of the application
+    Then User is logged out successfully
 
