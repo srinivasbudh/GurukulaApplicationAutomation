@@ -75,7 +75,7 @@ public class LoginPageStepDefinitions {
     }
 
     @Given("^User is Logged in into the application$")
-    public void user_is_Logged_in_into_the_application() {
+    public void authenticateUser() {
         accessLoginForm();
         loginPageStep.performValidLogin();
         loginPageStep.verifyLoginSuccessful();
