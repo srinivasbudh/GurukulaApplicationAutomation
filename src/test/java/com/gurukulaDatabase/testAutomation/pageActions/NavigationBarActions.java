@@ -13,4 +13,9 @@ public class NavigationBarActions {
     public void perfromLogout(){
         navigationBar.clickLogout();
     }
+
+    @Step
+    public void navigateToBranches(){
+        navigationBar.clickBranch();
+    }
 }
