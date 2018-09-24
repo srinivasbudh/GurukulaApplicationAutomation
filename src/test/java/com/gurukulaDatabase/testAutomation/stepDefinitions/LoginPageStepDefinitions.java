@@ -1,10 +1,10 @@
 package com.gurukulaDatabase.testAutomation.stepDefinitions;
 
 import com.gurukulaDatabase.testAutomation.pageActions.HomePageActions;
+import com.gurukulaDatabase.testAutomation.pageActions.NavigationBarActions;
 import com.gurukulaDatabase.testAutomation.pageActions.LoginPageActions;
-import com.gurukulaDatabase.testAutomation.pageActions.RegistrationPageActions;
 import com.gurukulaDatabase.testAutomation.pageActions.ResetPasswordPageActions;
-import com.gurukulaDatabase.testAutomation.pageObjects.ResetPasswordPage;
+import com.gurukulaDatabase.testAutomation.pageActions.RegistrationPageActions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,11 +26,14 @@ public class LoginPageStepDefinitions {
     @Steps
     ResetPasswordPageActions resetPasswordStep;
 
+    @Steps
+    NavigationBarActions navigationBarStep;
+
     @Given("^User is accessing the Login page$")
     public void accessLoginForm() {
         homePagestep.launch();
         homePagestep.navigateToLoginPage();
-        assertEquals("Login page assertion",true,loginPageStep.verifyLoginPageIsLoaded());
+        assertEquals("Login page assertion",true,loginPageStep.isLoginPageLoaded());
     }
 
     @When("^User clicks on Registration Link$")
@@ -69,6 +72,23 @@ public class LoginPageStepDefinitions {
         }else{
             assertEquals("login failure assertion",true,loginPageStep.loginSuccessful());
         }
+    }
+
+    @Given("^User is Logged in into the application$")
+    public void user_is_Logged_in_into_the_application() {
+        accessLoginForm();
+        loginPageStep.performValidLogin();
+        loginPageStep.verifyLoginSuccessful();
+    }
+
+    @When("^Users Logout of the application$")
+    public void users_Logout_of_the_application() {
+        navigationBarStep.perfromLogout();
+    }
+
+    @Then("^User is logged out successfully$")
+    public void user_is_logged_out_successfully() {
+        homePagestep.verifyApplicationIsLaunched();
     }
 
 

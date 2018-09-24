@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class RunFeaturesTest {
     @BeforeClass
-    public static void setProprties() throws IOException, InterruptedException {
+    public static void launchGurukula() throws IOException, InterruptedException {
         System.out.println("Launching Gurukula application for test execution .. Please wait... ");
         GurukulaApplication.launch();
     }

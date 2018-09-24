@@ -13,3 +13,4 @@ Feature: Validate the View of Login form and other components
     Given User is accessing the Login page
     When User clicks on Reset password Link
     Then Reset password form is accessible
+
