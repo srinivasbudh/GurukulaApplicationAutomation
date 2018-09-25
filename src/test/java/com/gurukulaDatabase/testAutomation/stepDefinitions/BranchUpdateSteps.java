@@ -159,7 +159,34 @@ public class BranchUpdateSteps {
             branchesViewStep.searchForARecord(newName);
             assertEquals("Branch details NOT updated assertion",false,branchesViewStep.verifyRecordFound(newName,newCode));
         }
+    }
 
+    @When("^He attempts to delete a Branch with details (.*), (.*)$")
+    public void updateARecord(String name,String code) {
+        branchesViewStep.searchForARecord(name);
+        WebElement branchDetails = branchesViewStep.getBranchDetails(name, code);
+        branchesViewStep.deleteABranch(branchDetails);
+    }
+
+    @When("^Delete the record using Delete option$")
+    public void deleteBranchDetails() {
+        branchesViewStep.deleteRecordProcess();
+    }
+
+    @When("^Cancel delete record process using Cancel option$")
+    public void abortDeleteBranchProcess() {
+        branchesViewStep.abortDeleteRecordProcess();
+    }
+
+    @When("^Record details (.*), (.*), (.*) deleted$")
+    public void verifyIfRecordExist(String name,String code,String status) {
+        if(status.equalsIgnoreCase("is")){
+            branchesViewStep.searchForARecord(name);
+            assertEquals("Branch Deleted Verification",false,branchesViewStep.verifyRecordFound(name, code));
+        }else{
+            branchesViewStep.searchForARecord(name);
+            assertEquals("Branch Deleted Verification",true,branchesViewStep.verifyRecordFound(name, code));
+        }
     }
 
 }

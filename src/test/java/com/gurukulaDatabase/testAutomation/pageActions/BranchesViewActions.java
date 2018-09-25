@@ -110,4 +110,13 @@ public class BranchesViewActions {
         branchesViewPage.clickDeleteBranchButton(webElement);
     }
 
+    @Step
+    public void abortDeleteRecordProcess(){
+        branchesViewPage.clickAbortDelete();
+    }
+
+    @Step
+    public void deleteRecordProcess(){
+        branchesViewPage.clickDeleteRecord();
+    }
 }

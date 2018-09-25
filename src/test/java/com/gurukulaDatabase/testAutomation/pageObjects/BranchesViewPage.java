@@ -25,6 +25,12 @@ public class BranchesViewPage extends BasePage {
     @FindBy(xpath="//table[@class='table table-striped']/tbody")
     WebElement branchesTable;
 
+    @FindBy(xpath="//button[@class='btn btn-danger']//span[@translate='entity.action.delete']")
+    WebElement deleteRecordButton;
+
+    @FindBy(xpath="//form[@name='deleteForm']//span[@translate='entity.action.cancel']")
+    WebElement abortDeleteButton;
+
     private String deleteBranchButton="//button[@class='btn btn-danger btn-sm']//span[@translate='entity.action.delete']";
 
     private String viewBranchButton="//span[@translate='entity.action.view']";
@@ -97,6 +103,21 @@ public class BranchesViewPage extends BasePage {
         return getBranchesDatabase().size();
     }
 
+    /*
+     * This methods clicks on delete button of Delete Record popup
+     */
+    public void clickDeleteRecord(){
+        waitForElementToBeDisplayed(deleteRecordButton);
+        deleteRecordButton.click();
+    }
+
+    /*
+     * This methods clicks on cancel button of Delete Record popup
+     */
+    public void clickAbortDelete(){
+        waitForElementToBeDisplayed(abortDeleteButton);
+        abortDeleteButton.click();
+    }
 
 
 }
