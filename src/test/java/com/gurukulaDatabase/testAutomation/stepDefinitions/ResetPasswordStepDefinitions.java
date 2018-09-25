@@ -26,10 +26,11 @@ public class ResetPasswordStepDefinitions {
     @Given("^User is accessing the Reset password form$")
     public void accessRegistrationForm() {
         loginPageStep.accessLoginForm();
+        loginPageStep.navigateToForgotPassword();
     }
 
     @When("^User attempts to reset password for (.*)$")
-    public void accessRegistrationForm(String emailId) {
+    public void requestPasswordReset(String emailId) {
         registrationPageStep.enterTextIntoEmail(emailId);
         resetPasswordStep.resetPasswordForEmail();
 
