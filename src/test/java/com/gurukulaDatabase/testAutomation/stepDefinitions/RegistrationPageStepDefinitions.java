@@ -2,8 +2,6 @@ package com.gurukulaDatabase.testAutomation.stepDefinitions;
 
 import com.gurukulaDatabase.testAutomation.pageActions.HomePageActions;
 import com.gurukulaDatabase.testAutomation.pageActions.RegistrationPageActions;
-import com.gurukulaDatabase.testAutomation.pageObjects.HomePage;
-import com.gurukulaDatabase.testAutomation.pageObjects.RegistrationPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

@@ -16,9 +16,6 @@ public class ResetPasswordStepDefinitions {
     LoginPageActions loginPageStep;
 
     @Steps
-    HomePageActions homePagestep;
-
-    @Steps
     LoginPageStepDefinitions loginPageStepDefinitions;
     @Steps
     RegistrationPageActions registrationPageStep;
@@ -26,17 +23,14 @@ public class ResetPasswordStepDefinitions {
     @Steps
     ResetPasswordPageActions resetPasswordStep;
 
-    @Steps
-    NavigationBarActions navigationBarStep;
-
     @Given("^User is accessing the Reset password form$")
     public void accessRegistrationForm() {
-        loginPageStepDefinitions.accessLoginForm();
+        loginPageStep.accessLoginForm();
         loginPageStep.navigateToForgotPassword();
     }
 
     @When("^User attempts to reset password for (.*)$")
-    public void accessRegistrationForm(String emailId) {
+    public void requestPasswordReset(String emailId) {
         registrationPageStep.enterTextIntoEmail(emailId);
         resetPasswordStep.resetPasswordForEmail();
 

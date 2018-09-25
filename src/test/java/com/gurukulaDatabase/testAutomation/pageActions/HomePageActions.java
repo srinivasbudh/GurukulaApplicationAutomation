@@ -39,7 +39,11 @@ public class HomePageActions {
 
     @Step
     public void navigateToLoginPage(){
-        homePage.clickLoginButton();
+        if(isLoginLinkDisplayed()) {
+            homePage.clickLoginButton();
+        }
+
     }
+
 
 }

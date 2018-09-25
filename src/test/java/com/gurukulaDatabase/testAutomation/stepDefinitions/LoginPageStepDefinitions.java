@@ -31,9 +31,7 @@ public class LoginPageStepDefinitions {
 
     @Given("^User is accessing the Login page$")
     public void accessLoginForm() {
-        homePagestep.launch();
-        homePagestep.navigateToLoginPage();
-        assertEquals("Login page assertion",true,loginPageStep.isLoginPageLoaded());
+        loginPageStep.accessLoginForm();
     }
 
     @When("^User clicks on Registration Link$")
@@ -76,9 +74,7 @@ public class LoginPageStepDefinitions {
 
     @Given("^User is Logged in into the application$")
     public void authenticateUser() {
-        accessLoginForm();
-        loginPageStep.performValidLogin();
-        loginPageStep.verifyLoginSuccessful();
+        loginPageStep.authenticateUser();
     }
 
     @When("^Users Logout of the application$")
