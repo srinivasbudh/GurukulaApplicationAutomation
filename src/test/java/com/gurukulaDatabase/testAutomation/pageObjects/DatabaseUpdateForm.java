@@ -1,6 +1,7 @@
 package com.gurukulaDatabase.testAutomation.pageObjects;
 
 import com.gurukulaDatabase.testAutomation.helper.BasePage;
+import net.thucydides.core.pages.components.Dropdown;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
  * Created by Srinivas Budha on 9/24/2018.
  */
 
-public class BranchForm extends BasePage {
+public class DatabaseUpdateForm extends BasePage {
 
     @FindBy(xpath="//input[@name='id']")
     WebElement idInputField;
@@ -39,6 +40,9 @@ public class BranchForm extends BasePage {
 
     @FindBy(xpath="//div[@class='form-group']//*[@translate='gurukulaApp.branch.name']")
     WebElement nameLabelWithOutError;
+
+    @FindBy(xpath = "//select[@name='related_branch']")
+    Dropdown branchDropDown;
 
     /*
      * This method enters text into name field
@@ -126,5 +130,12 @@ public class BranchForm extends BasePage {
      */
     public void clickCancelButton(){
         cancelButton.click();
+    }
+
+    /*
+     * This method selects Value From Dropdown
+     */
+    public void selectValue(String branchName){
+        branchDropDown.select(branchName);
     }
 }
