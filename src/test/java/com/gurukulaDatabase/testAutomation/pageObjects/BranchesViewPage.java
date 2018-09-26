@@ -49,6 +49,7 @@ public class BranchesViewPage extends BasePage {
      * This method verifies if createbranch Button is Displayed
      */
     public boolean isCreateNewBranchDisplayed(){
+        waitForElementToBeDisplayed(createNewBranchButton);
         return createNewBranchButton.isDisplayed();
     }
 

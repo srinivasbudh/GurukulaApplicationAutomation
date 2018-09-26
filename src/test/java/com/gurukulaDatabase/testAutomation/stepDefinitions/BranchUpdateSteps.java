@@ -91,13 +91,14 @@ public class BranchUpdateSteps {
     @When("^Users creates a branch with details (.*) and (.*)$")
     public void createUser(String name,String code) {
         branchFormStep.inputBranchData(name,code);
-        branchFormStep.saveBranchData();
-        branchesViewStep.searchForARecord(name);
     }
 
     @Then("^User (.*) created with details (.*) and (.*) in database$")
     public void verifyBranchCreated(String status, String name,String code) {
         if(status.equalsIgnoreCase("is")){
+            branchFormStep.saveBranchData();
+            assertEquals("branches view page loaded Assertion",true,branchesViewStep.isBranchViewLoaded());
+            branchesViewStep.searchForARecord(name);
             assertEquals("Branch created assertion",true,branchesViewStep.isBranchViewLoaded());
             assertEquals("Branch created assertion",true,branchesViewStep.verifyRecordFound(name,code));
         }else{
@@ -151,9 +152,8 @@ public class BranchUpdateSteps {
 
 
     @Then("^Branch (.*) updated with (.*), (.*)$")
-    public void verifybranchFound(String status,String newName,String newCode) {
+    public void verifyBranchFound(String status,String newName,String newCode) {
         if(status.equalsIgnoreCase("is")){
-
             assertEquals("Branch details updated assertion",true,branchesViewStep.verifyRecordFound(newName,newCode));
         }else{
             branchesViewStep.searchForARecord(newName);

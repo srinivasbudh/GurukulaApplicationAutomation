@@ -2,7 +2,7 @@ Feature: Create a Branch on Gurukula application
 
   In this feature all the possibilities of create a branch are verified
 
-  @VerifyCreationOfBranch
+  @VerifyCreationOfBranch @TestData
   Scenario Outline: Verify creation of branch is successful when valid parameters are provided
     Given User is trying to create a form
     When Users creates a branch with details <Name> and <Code>
@@ -11,8 +11,9 @@ Feature: Create a Branch on Gurukula application
     Examples:
       | Name         | Code    |  creationStatus |
       | Santa Clara  | HOF1    | is              |
-      | AmsterDam    | EUHOF1  | is              |
+      | Amsterdam    | EUHOF1  | is              |
       | HYDERABAD    | INDOF1  | is              |
+      | DummyBranch  | DUM01   | is              |
 
   @CreationOfBranchWithInvalidName
     Examples:
