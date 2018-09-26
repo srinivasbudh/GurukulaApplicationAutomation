@@ -25,8 +25,11 @@ public class BranchForm extends BasePage {
     @FindBy(xpath="//div[@ng-show='editForm.name.$invalid']")
     WebElement nameErrorMessage;
 
-    @FindBy(xpath="//span[@translate='entity.action.save']")
+    @FindBy(xpath="//button[@type='submit' and @class='btn btn-primary']")
     WebElement saveButton;
+
+    @FindBy(xpath="//button[@type='submit']//span[@translate='entity.action.save']")
+    WebElement saveButtonText;
 
     @FindBy(xpath="//span[@translate='entity.action.cancel']")
     WebElement cancelButton;
@@ -41,6 +44,7 @@ public class BranchForm extends BasePage {
      * This method enters text into name field
      */
     public void enterName(String name){
+        nameInputField.clear();
         enterTextInto(nameInputField,name);
     }
 
@@ -48,6 +52,7 @@ public class BranchForm extends BasePage {
      * This method enters text into code field
      */
     public void enterCode(String code){
+        codeInputField.clear();
         enterTextInto(codeInputField,code);
     }
 
@@ -104,7 +109,16 @@ public class BranchForm extends BasePage {
      * This method clicks on save button
      */
     public void clickSaveButton(){
-        saveButton.click();
+        if(isSaveButtonEnabled()){
+            saveButtonText.click();
+        }
+    }
+
+    /*
+     * This method verify if saveButton is enabled
+     */
+    public boolean isSaveButtonEnabled(){
+        return saveButton.isEnabled();
     }
 
     /*

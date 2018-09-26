@@ -73,4 +73,8 @@ public class BranchFormActions {
         branchForm.clickCancelButton();
     }
 
+    @Step
+    public boolean isSaveButtonEnabled(){
+        return branchForm.isSaveButtonEnabled();
+    }
 }

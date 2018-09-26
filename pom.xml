@@ -13,6 +13,7 @@
         <serenity.version>1.9.31</serenity.version>
         <serenity.maven.version>1.9.31</serenity.maven.version>
         <serenity.cucumber.version>1.9.12</serenity.cucumber.version>
+        <slf4j.version>1.7.7</slf4j.version>
     </properties>
 
     <dependencies>
@@ -37,6 +38,12 @@
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-reports</artifactId>
             <version>${serenity.version}</version>
+        </dependency>
+        <!-- Adding dependency for serenity logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
 
