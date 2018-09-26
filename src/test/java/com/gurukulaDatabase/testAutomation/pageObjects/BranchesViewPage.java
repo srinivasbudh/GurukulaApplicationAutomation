@@ -31,12 +31,12 @@ public class BranchesViewPage extends BasePage {
     @FindBy(xpath="//form[@name='deleteForm']//span[@translate='entity.action.cancel']")
     WebElement abortDeleteButton;
 
-    private String deleteBranchButton="//button[@class='btn btn-danger btn-sm']//span[@translate='entity.action.delete']";
+    private int deleteBranchButton=2;
 
-    private String viewBranchButton="//span[@translate='entity.action.view']";
+    private int viewBranchButton=0;
 
 
-    private String editBranchButton="//span[@translate='entity.action.edit']";
+    private int editBranchButton=1;
 
     /*
      * This method click's on create new Branch button
@@ -73,21 +73,24 @@ public class BranchesViewPage extends BasePage {
      * This method clicks on view Button
      */
     public void clickViewBranchButton(WebElement webElement) {
-        webElement.findElement(By.xpath(viewBranchButton)).click();
+        List<WebElement> buttons =webElement.findElements(By.tagName("button"));
+        buttons.get(viewBranchButton).click();
     }
 
     /*
      * This method clicks on Edit Button
      */
     public void clickEditBranchButton(WebElement webElement){
-        webElement.findElement(By.xpath(editBranchButton)).click();
+        List<WebElement> buttons =webElement.findElements(By.tagName("button"));
+        buttons.get(editBranchButton).click();
     }
 
     /*
      * This method clicks on Delete Button
      */
     public void clickDeleteBranchButton(WebElement webElement){
-        webElement.findElement(By.xpath(deleteBranchButton)).click();
+        List<WebElement> buttons =webElement.findElements(By.tagName("button"));
+        buttons.get(deleteBranchButton).click();
     }
 
     /*

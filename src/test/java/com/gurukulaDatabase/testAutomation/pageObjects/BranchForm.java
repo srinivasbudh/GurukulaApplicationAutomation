@@ -28,6 +28,9 @@ public class BranchForm extends BasePage {
     @FindBy(xpath="//button[@type='submit' and @class='btn btn-primary']")
     WebElement saveButton;
 
+    @FindBy(xpath="//button[@type='submit']//span[@translate='entity.action.save']")
+    WebElement saveButtonText;
+
     @FindBy(xpath="//span[@translate='entity.action.cancel']")
     WebElement cancelButton;
 
@@ -106,7 +109,9 @@ public class BranchForm extends BasePage {
      * This method clicks on save button
      */
     public void clickSaveButton(){
-        saveButton.click();
+        if(isSaveButtonEnabled()){
+            saveButtonText.click();
+        }
     }
 
     /*
