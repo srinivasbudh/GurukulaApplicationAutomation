@@ -4,7 +4,7 @@ Feature: Create a Branch on Gurukula application
 
   @VerifyCreationOfBranch @Regression
   Scenario Outline: Verify creation of branch is successful when valid parameters are provided
-    Given User is trying to create a form
+    Given User is trying to create a Branch
     When Users creates a branch with details <Name> and <Code>
     Then User <creationStatus> created with details <Name> and <Code> in database
   @CreationOfBranchWithValidInputs

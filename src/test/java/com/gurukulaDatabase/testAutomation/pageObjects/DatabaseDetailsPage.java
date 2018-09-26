@@ -11,19 +11,19 @@ import java.util.List;
  * Created by Srinivas Budha on 9/24/2018.
  */
 
-public class BranchesViewPage extends BasePage {
+public class DatabaseDetailsPage extends BasePage {
 
     @FindBy(xpath="//span[@translate='gurukulaApp.branch.home.createLabel']")
-    WebElement createNewBranchButton;
+    WebElement createNewRecordButton;
 
     @FindBy(id="searchQuery")
-    WebElement searchBranchBox;
+    WebElement searchRecordBox;
 
     @FindBy(xpath="//button[@ng-click='search()']")
-    WebElement searchBranchButton;
+    WebElement searchRecordButton;
 
     @FindBy(xpath="//table[@class='table table-striped']/tbody")
-    WebElement branchesTable;
+    WebElement dbRecordsTable;
 
     @FindBy(xpath="//button[@class='btn btn-danger']//span[@translate='entity.action.delete']")
     WebElement deleteRecordButton;
@@ -31,80 +31,80 @@ public class BranchesViewPage extends BasePage {
     @FindBy(xpath="//form[@name='deleteForm']//span[@translate='entity.action.cancel']")
     WebElement abortDeleteButton;
 
-    private int deleteBranchButton=2;
+    private int deleteDataButton =2;
 
-    private int viewBranchButton=0;
+    private int viewdataButton =0;
 
 
-    private int editBranchButton=1;
+    private int editDataButton =1;
 
     /*
      * This method click's on create new Branch button
      */
-    public void clickCreateNewBranch(){
-        createNewBranchButton.click();
+    public void clickCreateNewRecord(){
+        createNewRecordButton.click();
     }
 
     /*
      * This method verifies if createbranch Button is Displayed
      */
-    public boolean isCreateNewBranchDisplayed(){
-        waitForElementToBeDisplayed(createNewBranchButton);
-        return createNewBranchButton.isDisplayed();
+    public boolean isCreateNewRecordDisplayed(){
+        waitForElementToBeDisplayed(createNewRecordButton);
+        return createNewRecordButton.isDisplayed();
     }
 
     /*
      * This method enters data into search query Box
      */
     public void enterSearchData(String searchValue){
-        waitForElementToBeDisplayed(searchBranchBox);
-        searchBranchBox.clear();
-        enterTextInto(searchBranchBox,searchValue);
+        waitForElementToBeDisplayed(searchRecordBox);
+        searchRecordBox.clear();
+        enterTextInto(searchRecordBox,searchValue);
     }
 
     /*
      * This method click on search Query Button
      */
     public void clickSearch(){
-        searchBranchButton.click();
+        searchRecordButton.click();
     }
 
     /*
      * This method clicks on view Button
      */
-    public void clickViewBranchButton(WebElement webElement) {
+    public void clickViewButtonOnRecord(WebElement webElement) {
         List<WebElement> buttons =webElement.findElements(By.tagName("button"));
-        buttons.get(viewBranchButton).click();
+        buttons.get(viewdataButton).click();
     }
 
     /*
      * This method clicks on Edit Button
      */
-    public void clickEditBranchButton(WebElement webElement){
+    public void clickEditButtonOnRecord(WebElement webElement){
         List<WebElement> buttons =webElement.findElements(By.tagName("button"));
-        buttons.get(editBranchButton).click();
+        buttons.get(editDataButton).click();
     }
 
     /*
      * This method clicks on Delete Button
      */
-    public void clickDeleteBranchButton(WebElement webElement){
+    public void clickDeleteButtonOnRecord(WebElement webElement){
         List<WebElement> buttons =webElement.findElements(By.tagName("button"));
-        buttons.get(deleteBranchButton).click();
+        buttons.get(deleteDataButton).click();
     }
 
     /*
      * This method returns the List of branches
      */
-    public List<WebElement> getBranchesDatabase(){
-        return branchesTable.findElements(By.tagName("tr"));
+    public List<WebElement> getDatabaseRecords(){
+        return dbRecordsTable.findElements(By.tagName("tr"));
     }
 
     /*
      * This method return the number of records on database
      */
     public int getRowsCountInDatabase(){
-        return getBranchesDatabase().size();
+        return getDatabaseRecords().size();
     }
 
     /*

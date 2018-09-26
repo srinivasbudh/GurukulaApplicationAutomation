@@ -1,60 +1,59 @@
 package com.gurukulaDatabase.testAutomation.pageActions;
 
-import com.gurukulaDatabase.testAutomation.pageObjects.BranchForm;
+import com.gurukulaDatabase.testAutomation.pageObjects.DatabaseUpdateForm;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.Steps;
 
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by x000810 on 9/24/2018.
  */
-public class BranchFormActions {
+public class DataBaseUpdateActions {
 
-    private BranchForm branchForm;
+    private DatabaseUpdateForm databaseUpdateForm;
 
     @Step
     public void verifyIDFieldIsDisabled(){
-        assertEquals("ID field is Not Editable assertion",true,branchForm.isIDFieldIsDisabled());
+        assertEquals("ID field is Not Editable assertion",true, databaseUpdateForm.isIDFieldIsDisabled());
     }
 
     @Step
     public void enterNameAsInput(String name){
-        branchForm.enterName(name);
+        databaseUpdateForm.enterName(name);
     }
 
     @Step
     public void enterCodeAsInput(String code){
-        branchForm.enterCode(code);
+        databaseUpdateForm.enterCode(code);
     }
 
     @Step
     public boolean isNameHasAError(){
-        return branchForm.isNameFieldErrorDisplayed();
+        return databaseUpdateForm.isNameFieldErrorDisplayed();
     }
 
     @Step
     public boolean isCodeHasAError(){
-        return branchForm.isCodeFieldErrorDisplayed();
+        return databaseUpdateForm.isCodeFieldErrorDisplayed();
     }
 
     @Step
     public boolean isNameValueNotAnError(){
-        return branchForm.noNameErrorIsDisplayed();
+        return databaseUpdateForm.noNameErrorIsDisplayed();
     }
 
     @Step
     public boolean isCodeValueNotAnError(){
-        return branchForm.noCodeErrorIsDisplayed();
+        return databaseUpdateForm.noCodeErrorIsDisplayed();
     }
     @Step
     public String getNameError(){
-        return branchForm.getNameErrorMessage();
+        return databaseUpdateForm.getNameErrorMessage();
     }
 
     @Step
     public String getCodeError(){
-        return branchForm.getCodeErrorMessage();
+        return databaseUpdateForm.getCodeErrorMessage();
     }
 
     @Step
@@ -64,17 +63,17 @@ public class BranchFormActions {
     }
 
     @Step
-    public void saveBranchData(){
-        branchForm.clickSaveButton();
+    public void saveDataToDB(){
+        databaseUpdateForm.clickSaveButton();
     }
 
     @Step
-    public void cancelBranchData(){
-        branchForm.clickCancelButton();
+    public void cancelSavingData(){
+        databaseUpdateForm.clickCancelButton();
     }
 
     @Step
     public boolean isSaveButtonEnabled(){
-        return branchForm.isSaveButtonEnabled();
+        return databaseUpdateForm.isSaveButtonEnabled();
     }
 }

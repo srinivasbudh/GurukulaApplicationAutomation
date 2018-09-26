@@ -1,6 +1,6 @@
 package com.gurukulaDatabase.testAutomation.pageActions;
 
-import com.gurukulaDatabase.testAutomation.pageObjects.BranchesViewPage;
+import com.gurukulaDatabase.testAutomation.pageObjects.DatabaseDetailsPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import org.openqa.selenium.WebElement;
@@ -13,8 +13,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by Srinivas Budha on 9/25/2018.
  */
-public class BranchesViewActions {
-    private BranchesViewPage branchesViewPage;
+public class DatabaseDetailsActions {
+    private DatabaseDetailsPage databaseDetailsPage;
     @Steps
     LoginPageActions loginPageStep;
 
@@ -22,38 +22,38 @@ public class BranchesViewActions {
     NavigationBarActions navigationBarStep;
 
     @Step
-    public boolean isBranchViewLoaded(){
-        return branchesViewPage.isCreateNewBranchDisplayed();
+    public boolean isRecordViewLoaded(){
+        return databaseDetailsPage.isCreateNewRecordDisplayed();
     }
 
     @Step
     public void verifyBranchViewIsLoaded(){
-        assertEquals("Assert if branches page is loaded",true,branchesViewPage.isCreateNewBranchDisplayed());
+        assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewRecordDisplayed());
     }
 
     @Step
-    public void navigateToCreateBranchForm(){
+    public void navigateToCreateRecordForm(){
         loginPageStep.authenticateUser();
         navigationBarStep.navigateToBranches();
-        branchesViewPage.clickCreateNewBranch();
+        databaseDetailsPage.clickCreateNewRecord();
     }
 
     @Step
-    public void navigateToBranchesView(){
+    public void navigateToRecordsView(){
         loginPageStep.authenticateUser();
         navigationBarStep.navigateToBranches();
     }
 
     @Step
     public void searchForARecord(String searchQuery){
-        branchesViewPage.enterSearchData(searchQuery);
-        branchesViewPage.clickSearch();
+        databaseDetailsPage.enterSearchData(searchQuery);
+        databaseDetailsPage.clickSearch();
     }
 
     @Step
-    public WebElement getBranchDetails(String name, String code){
+    public WebElement getRecordDetails(String name, String code){
         WebElement branchFound = null;
-        List<WebElement> allBranches= branchesViewPage.getBranchesDatabase();
+        List<WebElement> allBranches= databaseDetailsPage.getDatabaseRecords();
         if(allBranches.size()!=0){
             Iterator<WebElement> branches = allBranches.iterator();
             while(branches.hasNext()){
@@ -71,14 +71,14 @@ public class BranchesViewActions {
     }
 
     @Step
-    public int getNumberOfBranches(){
-        return branchesViewPage.getRowsCountInDatabase();
+    public int getNumberOfRecords(){
+        return databaseDetailsPage.getRowsCountInDatabase();
     }
 
     @Step
     public boolean verifyRecordFound(String name, String code){
         boolean branchFound = false;
-        List<WebElement> allBranches= branchesViewPage.getBranchesDatabase();
+        List<WebElement> allBranches= databaseDetailsPage.getDatabaseRecords();
         if(allBranches.size()!=0){
             Iterator<WebElement> branches = allBranches.iterator();
             while(branches.hasNext()){
@@ -96,27 +96,27 @@ public class BranchesViewActions {
     }
 
     @Step
-    public void editABranch(WebElement webElement){
-        branchesViewPage.clickEditBranchButton(webElement);
+    public void editARecord(WebElement webElement){
+        databaseDetailsPage.clickEditButtonOnRecord(webElement);
     }
 
     @Step
-    public void viewABranch(WebElement webElement){
-        branchesViewPage.clickViewBranchButton(webElement);
+    public void viewARecord(WebElement webElement){
+        databaseDetailsPage.clickViewButtonOnRecord(webElement);
     }
 
     @Step
-    public void deleteABranch(WebElement webElement){
-        branchesViewPage.clickDeleteBranchButton(webElement);
+    public void deleteARecord(WebElement webElement){
+        databaseDetailsPage.clickDeleteButtonOnRecord(webElement);
     }
 
     @Step
     public void abortDeleteRecordProcess(){
-        branchesViewPage.clickAbortDelete();
+        databaseDetailsPage.clickAbortDelete();
     }
 
     @Step
     public void deleteRecordProcess(){
-        branchesViewPage.clickDeleteRecord();
+        databaseDetailsPage.clickDeleteRecord();
     }
 }

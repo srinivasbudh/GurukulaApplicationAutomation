@@ -3,7 +3,7 @@ Feature: Validate UI fields of Branch creation form
   In this feature all the UI fields of Branch creation form are validated
 
   Background:
-    Given User is trying to create a form
+    Given User is trying to create a Branch
 
   @VerifyNameFieldOnBranchForm @UI
     Scenario Outline: Verify Name field on Branch form accepts only Alphabets
