@@ -13,7 +13,7 @@ Feature: Create a Staff member on Gurukula application
       | First Employee    | Amsterdam    | is              |
       | SecondEmployee    | HYDERABAD    | is              |
       | CEO               |              | is              |
-      | Resigned Employee | Santa Clara  | is              |
+      | Resigned Employee | New York  | is              |
 
   @CreationOfBranchWithInvalidName
     Examples:
