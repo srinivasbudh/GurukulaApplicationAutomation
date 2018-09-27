@@ -22,20 +22,36 @@ public class DatabaseDetailsActions {
     NavigationBarActions navigationBarStep;
 
     @Step
-    public boolean isRecordViewLoaded(){
-        return databaseDetailsPage.isCreateNewRecordDisplayed();
+    public boolean isBranchViewLoaded(){
+        return databaseDetailsPage.isCreateNewBranchDisplayed();
+    }
+
+    @Step
+    public boolean isEmployeeViewLoaded(){
+        return databaseDetailsPage.isCreateNewEmployeeDisplayed();
     }
 
     @Step
     public void verifyBranchViewIsLoaded(){
-        assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewRecordDisplayed());
+        assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewBranchDisplayed());
     }
 
     @Step
-    public void navigateToCreateRecordForm(){
+    public void verifyStaffViewIsLoaded(){
+        assertEquals("Assert if Staff page is loaded",true, databaseDetailsPage.isCreateNewEmployeeDisplayed());
+    }
+
+    @Step
+    public void navigateToCreateRecordForm(String recordType){
         loginPageStep.authenticateUser();
-        navigationBarStep.navigateToBranches();
-        databaseDetailsPage.clickCreateNewRecord();
+        if(recordType.equalsIgnoreCase("Branch")){
+            navigationBarStep.navigateToBranches();
+            databaseDetailsPage.clickCreateNewBranch();
+        }else{
+            navigationBarStep.navigateToStaff();
+            databaseDetailsPage.clickCreateNewStaff();
+        }
+
     }
 
     @Step

@@ -20,9 +20,9 @@ public class RecordUpdateSteps {
     @Steps
     DatabaseDetailsActions databaseDetailsStep;
 
-    @Given("^User is trying to create a Branch$")
-    public void navigateToCreateAForm() {
-      databaseDetailsStep.navigateToCreateRecordForm();
+    @Given("^User is trying to create a (.*)$")
+    public void navigateToCreateAForm(String recordType) {
+      databaseDetailsStep.navigateToCreateRecordForm(recordType);
       databaseUpdateStep.verifyIDFieldIsDisabled();
     }
 
@@ -36,19 +36,19 @@ public class RecordUpdateSteps {
         }
     }
 
-    @Then("^Then Name value (.*) Accepted, Error Message (.*) Displayed$")
-    public void validateInputOnNameField(String status,String errorStatus) {
+    @Then("^(.*) Name value (.*) Accepted, Error Message (.*) Displayed$")
+    public void validateInputOnNameField(String recordType,String status,String errorStatus) {
         if (status.equalsIgnoreCase("is")&&errorStatus.equalsIgnoreCase("is not")) {
-            assertEquals("Name field error message Assertion",true, databaseUpdateStep.isNameValueNotAnError());
+            assertEquals("Name field error message Assertion",true, databaseUpdateStep.isNameValueNotAnError(recordType));
         }else{
             assertEquals("Name field error message Assertion",true, databaseUpdateStep.isNameHasAError());
         }
     }
 
-    @Then("^Name error field has (.*) Message$")
-    public void assertErrorMessageOnName(String error) {
+    @Then("^(.*) Name error field has (.*) Message$")
+    public void assertErrorMessageOnName(String recordType,String error) {
         if(error.equalsIgnoreCase("No error")){
-            assertEquals("Name field error message Assertion",true, databaseUpdateStep.isNameValueNotAnError());
+            assertEquals("Name field error message Assertion",true, databaseUpdateStep.isNameValueNotAnError(recordType));
         }else{
             assertEquals("Name field error message assertion",error, databaseUpdateStep.getNameError());
         }
@@ -81,23 +81,37 @@ public class RecordUpdateSteps {
         }
     }
 
-    @When("^Users creates a branch with details (.*) and (.*)$")
-    public void createUser(String name,String code) {
-        databaseUpdateStep.inputBranchData(name,code);
+    @When("^Users creates a (.*) with details (.*) and (.*)$")
+    public void createUser(String recordType,String name,String code) {
+        if(recordType.equalsIgnoreCase("Branch")){
+            databaseUpdateStep.inputBranchData(name,code);
+        }else{
+            databaseUpdateStep.inputEmployeeData(name,code);
+        }
+
     }
 
-    @Then("^User (.*) created with details (.*) and (.*) in database$")
+    @Then("^Branch (.*) created with details (.*) and (.*) in database$")
     public void verifyBranchCreated(String status, String name,String code) {
         if(status.equalsIgnoreCase("is")){
             databaseUpdateStep.saveDataToDB();
-            assertEquals("branches view page loaded Assertion",true, databaseDetailsStep.isRecordViewLoaded());
+            assertEquals("branches view page loaded Assertion",true, databaseDetailsStep.isBranchViewLoaded());
             databaseDetailsStep.searchForARecord(name);
-            assertEquals("Branch created assertion",true, databaseDetailsStep.isRecordViewLoaded());
             assertEquals("Branch created assertion",true, databaseDetailsStep.verifyRecordFound(name,code));
         }else{
             assertEquals("Branch creation failure assertion",false, databaseUpdateStep.isSaveButtonEnabled());
         }
+    }
 
+    @Then("^Employee (.*) created with details (.*) and (.*) in database$")
+    public void verifyEmployeeCreated(String status, String name,String code) {
+        if(status.equalsIgnoreCase("is")){
+            databaseUpdateStep.saveDataToDB();
+            assertEquals("Employee view page loaded Assertion",true, databaseDetailsStep.isEmployeeViewLoaded());
+            assertEquals("Branch created assertion",true, databaseDetailsStep.verifyRecordFound(name,code));
+        }else{
+            assertEquals("Branch creation failure assertion",false, databaseUpdateStep.isSaveButtonEnabled());
+        }
     }
 
     @Given("^User is accessing all the branches$")

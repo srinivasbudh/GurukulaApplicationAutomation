@@ -14,7 +14,10 @@ import java.util.List;
 public class DatabaseDetailsPage extends BasePage {
 
     @FindBy(xpath="//span[@translate='gurukulaApp.branch.home.createLabel']")
-    WebElement createNewRecordButton;
+    WebElement createNewBranchButton;
+
+    @FindBy(xpath="//span[@translate='gurukulaApp.staff.home.createLabel']")
+    WebElement createNewEmployeeButton;
 
     @FindBy(id="searchQuery")
     WebElement searchRecordBox;
@@ -41,16 +44,32 @@ public class DatabaseDetailsPage extends BasePage {
     /*
      * This method click's on create new Branch button
      */
-    public void clickCreateNewRecord(){
-        createNewRecordButton.click();
+    public void clickCreateNewBranch(){
+        createNewBranchButton.click();
+    }
+
+
+    /*
+     * This method click's on create new Staff button
+     */
+    public void clickCreateNewStaff(){
+        createNewEmployeeButton.click();
     }
 
     /*
      * This method verifies if createbranch Button is Displayed
      */
-    public boolean isCreateNewRecordDisplayed(){
-        waitForElementToBeDisplayed(createNewRecordButton);
-        return createNewRecordButton.isDisplayed();
+    public boolean isCreateNewBranchDisplayed(){
+        waitForElementToBeDisplayed(createNewBranchButton);
+        return createNewBranchButton.isDisplayed();
+    }
+
+    /*
+     * This method verifies if createEmployee Button is Displayed
+     */
+    public boolean isCreateNewEmployeeDisplayed(){
+        waitForElementToBeDisplayed(createNewEmployeeButton);
+        return createNewEmployeeButton.isDisplayed();
     }
 
     /*

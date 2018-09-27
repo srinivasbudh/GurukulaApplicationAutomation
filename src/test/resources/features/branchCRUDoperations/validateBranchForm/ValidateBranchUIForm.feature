@@ -8,8 +8,8 @@ Feature: Validate UI fields of Branch creation form
   @VerifyNameFieldOnBranchForm @UI
     Scenario Outline: Verify Name field on Branch form accepts only Alphabets
       When Users enters <Name> into Name text box
-      Then Then Name value <ValueStatus> Accepted, Error Message <ErrorStatus> Displayed
-      And  Name error field has <ErrorText> Message
+      Then Branch Name value <ValueStatus> Accepted, Error Message <ErrorStatus> Displayed
+      And  Branch Name error field has <ErrorText> Message
   @NoErrorOnCreateBranch
     Examples:
       | Name    | ValueStatus | ErrorStatus |ErrorText |
