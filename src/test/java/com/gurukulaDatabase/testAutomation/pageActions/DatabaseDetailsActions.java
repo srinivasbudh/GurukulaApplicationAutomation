@@ -32,10 +32,19 @@ public class DatabaseDetailsActions {
     }
 
     @Step
+    public void verifyRecordViewIsLoaded(String recordType){
+        if(recordType.contains("branch")){
+            verifyBranchViewIsLoaded();
+        }else{
+            verifyStaffViewIsLoaded();
+        }
+
+    }
+
+    @Step
     public void verifyBranchViewIsLoaded(){
         assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewBranchDisplayed());
     }
-
     @Step
     public void verifyStaffViewIsLoaded(){
         assertEquals("Assert if Staff page is loaded",true, databaseDetailsPage.isCreateNewEmployeeDisplayed());
@@ -55,9 +64,13 @@ public class DatabaseDetailsActions {
     }
 
     @Step
-    public void navigateToRecordsView(){
+    public void navigateToRecordsView(String recordType){
         loginPageStep.authenticateUser();
-        navigationBarStep.navigateToBranches();
+        if(recordType.equalsIgnoreCase("Branches")){
+            navigationBarStep.navigateToBranches();
+        }else{
+            navigationBarStep.navigateToStaff();
+        }
     }
 
     @Step
@@ -134,5 +147,15 @@ public class DatabaseDetailsActions {
     @Step
     public void deleteRecordProcess(){
         databaseDetailsPage.clickDeleteRecord();
+    }
+
+    @Step
+    public boolean arePageNavigationButtonsEnabled(){
+        boolean returnValue = false;
+            if(databaseDetailsPage.isNextButtonEnabled())
+                returnValue =true;
+            if(databaseDetailsPage.isPreviousButtonEnabled())
+                returnValue=true;
+        return returnValue;
     }
 }

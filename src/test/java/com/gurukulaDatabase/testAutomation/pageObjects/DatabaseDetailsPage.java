@@ -34,10 +34,15 @@ public class DatabaseDetailsPage extends BasePage {
     @FindBy(xpath="//form[@name='deleteForm']//span[@translate='entity.action.cancel']")
     WebElement abortDeleteButton;
 
+    @FindBy(xpath="//li[@ng-show=\"links['last']\"]")
+    WebElement nextButtonForPagenavigation;
+
+    @FindBy(xpath="//li[@ng-show=\"links['first']\"]")
+    WebElement previousButtonForPagenavigation;
+
     private int deleteDataButton =2;
 
     private int viewdataButton =0;
-
 
     private int editDataButton =1;
 
@@ -62,6 +67,34 @@ public class DatabaseDetailsPage extends BasePage {
     public boolean isCreateNewBranchDisplayed(){
         waitForElementToBeDisplayed(createNewBranchButton);
         return createNewBranchButton.isDisplayed();
+    }
+
+    /*
+     * This Method verifies if next button is enabled
+     */
+    public boolean isNextButtonEnabled(){
+        return nextButtonForPagenavigation.isEnabled();
+    }
+
+    /*
+     * This method Clicks on Next button for Page navigation
+     */
+    public  void clickNextButton(){
+        nextButtonForPagenavigation.click();
+    }
+
+    /*
+     * This Method verifies if previous button is enabled
+     */
+    public boolean isPreviousButtonEnabled(){
+        return previousButtonForPagenavigation.isEnabled();
+    }
+
+    /*
+     * This method Clicks on previous button for Page navigation
+     */
+    public  void clickPreviousButton(){
+        previousButtonForPagenavigation.click();
     }
 
     /*

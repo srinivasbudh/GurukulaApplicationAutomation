@@ -4,21 +4,21 @@ Feature: Fetch a Branch from Gurukula Database
 
   @VerifyIfAUserCanFetchARecordWithExistingData @Regression
   Scenario Outline: : Verify user can fetch a record when search with a Exact value
-    Given User is accessing all the branches
+    Given User is accessing all branches information
     When he search for a branch with existing <NameOrCode>, <Value>
-    Then Branch with <NameOrCode>, <Value>  is Retrieved
+    Then Branch with <NameOrCode>, <Value>,<Value2>  is Retrieved
    @SearchForABranchUsingName
     Examples:
-    | NameOrCode | Value     |
-    | Name       | HYDERABAD |
+    | NameOrCode | Value     | Value2 |
+    | Name       | HYDERABAD | INDOF1 |
   @SearchForABranchUsingCode
     Examples:
-      | NameOrCode | Value     |
-      | Code       | INDOF1    |
+      | NameOrCode | Value     | Value2     |
+      | Code       | INDOF1    | HYDERABAD  |
 
   @VerifyBranchIsNotFoundWhenUserDoesAPartialSearch @Regression
   Scenario Outline: : Verify user can't fetch a record when search with a Partial value
-    Given User is accessing all the branches
+    Given User is accessing all branches information
     When he search for a branch with existing <NameOrCode>, <Value>
     Then No Branches are found
   @SearchForABranchUsingPartialName

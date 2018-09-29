@@ -108,16 +108,26 @@ public class RecordUpdateSteps {
         if(status.equalsIgnoreCase("is")){
             databaseUpdateStep.saveDataToDB();
             assertEquals("Employee view page loaded Assertion",true, databaseDetailsStep.isEmployeeViewLoaded());
-            assertEquals("Branch created assertion",true, databaseDetailsStep.verifyRecordFound(name,code));
+            assertEquals("Employee created assertion",true, databaseDetailsStep.verifyRecordFound(name,code));
         }else{
-            assertEquals("Branch creation failure assertion",false, databaseUpdateStep.isSaveButtonEnabled());
+            assertEquals("Employee creation failure assertion",false, databaseUpdateStep.isSaveButtonEnabled());
         }
     }
 
-    @Given("^User is accessing all the branches$")
-    public void navigateToBranchesview() {
-        databaseDetailsStep.navigateToRecordsView();
-        databaseDetailsStep.verifyBranchViewIsLoaded();
+    @Then("^Employee (.*) updated with (.*), (.*)$")
+    public void verifyEmployeeDetails(String status, String name,String branch) {
+        if(status.equalsIgnoreCase("is")){
+            assertEquals("Employee view page loaded Assertion",true, databaseDetailsStep.isEmployeeViewLoaded());
+            assertEquals("Employee updated assertion",true, databaseDetailsStep.verifyRecordFound(name,branch));
+        }else{
+            assertEquals("Employee updated assertion",false, databaseDetailsStep.verifyRecordFound(name,branch));
+        }
+    }
+
+    @Given("^User is accessing all (.*) information$")
+    public void navigateToBranchesView(String recordType) {
+        databaseDetailsStep.navigateToRecordsView(recordType);
+        databaseDetailsStep.verifyRecordViewIsLoaded(recordType);
     }
 
     @When("^he search for a branch with existing (.*), (.*)$")
@@ -125,27 +135,39 @@ public class RecordUpdateSteps {
         databaseDetailsStep.searchForARecord(searchQuery);
     }
 
-    @Then("^Branch with (.*), (.*) is Retrieved$")
-    public void verifyBranchSearchSuccessful(String fieldType,String searchQuery) {
+    @Then("^(.*) with (.*), (.*),(.*) is Retrieved$")
+    public void verifyBranchSearchSuccessful(String recordType,String fieldType,String searchQuery,String extraItem) {
         if(fieldType.equalsIgnoreCase("Name")){
-            databaseDetailsStep.verifyRecordFound(searchQuery,"");
-        }else if(fieldType.equalsIgnoreCase("Code")){
-            databaseDetailsStep.verifyRecordFound("",searchQuery);
+            assertEquals("asserrtion if record Found",true,databaseDetailsStep.verifyRecordFound(searchQuery,extraItem));
+        }else if(fieldType.equalsIgnoreCase("Code")||fieldType.equalsIgnoreCase("Branch")){
+            assertEquals("asserrtion if record Found",true,databaseDetailsStep.verifyRecordFound(extraItem,searchQuery));
         }
 
     }
 
-    @Then("^No Branches are found$")
-    public void verifyBranchSearchIsAFailure() {
-        assertEquals("No Branches Found Assertion",true, databaseDetailsStep.getNumberOfRecords()==0);
+    @Then("^No (.*) are found$")
+    public void verifyBranchSearchIsAFailure(String recordType) {
+        assertEquals("No Records Found Assertion",true, databaseDetailsStep.getNumberOfRecords()==0);
     }
 
-    @When("^he attempts to change the (.*) to (.*), (.*) to (.*)$")
+    @Then("^Page navigation buttons are disabled$")
+    public void verifypagenNavigationButtons() {
+        assertEquals("Page Navigation Buttons Are Disabled assertions",false, databaseDetailsStep.arePageNavigationButtonsEnabled());
+    }
+
+    @When("^he attempts to change the (.*) to (.*), (.*) to (.*) of a Branch$")
     public void updateARecord(String name,String newName,String code,String newCode) {
         databaseDetailsStep.searchForARecord(name);
         WebElement branchDetails = databaseDetailsStep.getRecordDetails(name, code);
         databaseDetailsStep.editARecord(branchDetails);
         databaseUpdateStep.inputBranchData(newName,newCode);
+    }
+
+    @When("^he attempts to change the (.*) to (.*), (.*) to (.*) of a employee$")
+    public void updateAEmployeeInformation(String name,String newName,String branch,String newBranch) {
+        WebElement branchDetails = databaseDetailsStep.getRecordDetails(name, branch);
+        databaseDetailsStep.editARecord(branchDetails);
+        databaseUpdateStep.inputEmployeeData(newName,newBranch);
     }
 
     @When("^Save the changes on Branch details form$")
@@ -168,9 +190,8 @@ public class RecordUpdateSteps {
         }
     }
 
-    @When("^He attempts to delete a Branch with details (.*), (.*)$")
-    public void updateARecord(String name,String code) {
-        databaseDetailsStep.searchForARecord(name);
+    @When("^He attempts to delete a (.*) with details (.*), (.*)$")
+    public void updateARecord(String recordType,String name,String code) {
         WebElement branchDetails = databaseDetailsStep.getRecordDetails(name, code);
         databaseDetailsStep.deleteARecord(branchDetails);
     }
@@ -188,10 +209,8 @@ public class RecordUpdateSteps {
     @When("^Record details (.*), (.*), (.*) deleted$")
     public void verifyIfRecordExist(String name,String code,String status) {
         if(status.equalsIgnoreCase("is")){
-            databaseDetailsStep.searchForARecord(name);
             assertEquals("Branch Deleted Verification",false, databaseDetailsStep.verifyRecordFound(name, code));
         }else{
-            databaseDetailsStep.searchForARecord(name);
             assertEquals("Branch Deleted Verification",true, databaseDetailsStep.verifyRecordFound(name, code));
         }
     }

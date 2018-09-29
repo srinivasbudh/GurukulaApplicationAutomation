@@ -2,7 +2,7 @@ Feature: Create a Staff member on Gurukula application
 
   In this feature all the possibilities of create a staff are verified
 
-  @VerifyCreationOfAStaffmember @Regression
+  @VerifyCreationOfAStaffMember @Regression
   Scenario Outline: Verify creation of staff is successful when valid parameters are provided
     Given User is trying to create a Employee
     When Users creates a employee with details <Name> and <Branch>
