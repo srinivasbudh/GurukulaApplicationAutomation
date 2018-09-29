@@ -22,26 +22,55 @@ public class DatabaseDetailsActions {
     NavigationBarActions navigationBarStep;
 
     @Step
-    public boolean isRecordViewLoaded(){
-        return databaseDetailsPage.isCreateNewRecordDisplayed();
+    public boolean isBranchViewLoaded(){
+        return databaseDetailsPage.isCreateNewBranchDisplayed();
+    }
+
+    @Step
+    public boolean isEmployeeViewLoaded(){
+        return databaseDetailsPage.isCreateNewEmployeeDisplayed();
+    }
+
+    @Step
+    public void verifyRecordViewIsLoaded(String recordType){
+        if(recordType.contains("branch")){
+            verifyBranchViewIsLoaded();
+        }else{
+            verifyStaffViewIsLoaded();
+        }
+
     }
 
     @Step
     public void verifyBranchViewIsLoaded(){
-        assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewRecordDisplayed());
+        assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewBranchDisplayed());
+    }
+    @Step
+    public void verifyStaffViewIsLoaded(){
+        assertEquals("Assert if Staff page is loaded",true, databaseDetailsPage.isCreateNewEmployeeDisplayed());
     }
 
     @Step
-    public void navigateToCreateRecordForm(){
+    public void navigateToCreateRecordForm(String recordType){
         loginPageStep.authenticateUser();
-        navigationBarStep.navigateToBranches();
-        databaseDetailsPage.clickCreateNewRecord();
+        if(recordType.equalsIgnoreCase("Branch")){
+            navigationBarStep.navigateToBranches();
+            databaseDetailsPage.clickCreateNewBranch();
+        }else{
+            navigationBarStep.navigateToStaff();
+            databaseDetailsPage.clickCreateNewStaff();
+        }
+
     }
 
     @Step
-    public void navigateToRecordsView(){
+    public void navigateToRecordsView(String recordType){
         loginPageStep.authenticateUser();
-        navigationBarStep.navigateToBranches();
+        if(recordType.equalsIgnoreCase("Branches")){
+            navigationBarStep.navigateToBranches();
+        }else{
+            navigationBarStep.navigateToStaff();
+        }
     }
 
     @Step
@@ -118,5 +147,15 @@ public class DatabaseDetailsActions {
     @Step
     public void deleteRecordProcess(){
         databaseDetailsPage.clickDeleteRecord();
+    }
+
+    @Step
+    public boolean arePageNavigationButtonsEnabled(){
+        boolean returnValue = false;
+            if(databaseDetailsPage.isNextButtonEnabled())
+                returnValue =true;
+            if(databaseDetailsPage.isPreviousButtonEnabled())
+                returnValue=true;
+        return returnValue;
     }
 }

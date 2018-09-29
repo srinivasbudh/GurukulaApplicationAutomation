@@ -14,7 +14,10 @@ import java.util.List;
 public class DatabaseDetailsPage extends BasePage {
 
     @FindBy(xpath="//span[@translate='gurukulaApp.branch.home.createLabel']")
-    WebElement createNewRecordButton;
+    WebElement createNewBranchButton;
+
+    @FindBy(xpath="//span[@translate='gurukulaApp.staff.home.createLabel']")
+    WebElement createNewEmployeeButton;
 
     @FindBy(id="searchQuery")
     WebElement searchRecordBox;
@@ -31,26 +34,75 @@ public class DatabaseDetailsPage extends BasePage {
     @FindBy(xpath="//form[@name='deleteForm']//span[@translate='entity.action.cancel']")
     WebElement abortDeleteButton;
 
+    @FindBy(xpath="//li[@ng-show=\"links['last']\"]")
+    WebElement nextButtonForPagenavigation;
+
+    @FindBy(xpath="//li[@ng-show=\"links['first']\"]")
+    WebElement previousButtonForPagenavigation;
+
     private int deleteDataButton =2;
 
     private int viewdataButton =0;
-
 
     private int editDataButton =1;
 
     /*
      * This method click's on create new Branch button
      */
-    public void clickCreateNewRecord(){
-        createNewRecordButton.click();
+    public void clickCreateNewBranch(){
+        createNewBranchButton.click();
+    }
+
+
+    /*
+     * This method click's on create new Staff button
+     */
+    public void clickCreateNewStaff(){
+        createNewEmployeeButton.click();
     }
 
     /*
      * This method verifies if createbranch Button is Displayed
      */
-    public boolean isCreateNewRecordDisplayed(){
-        waitForElementToBeDisplayed(createNewRecordButton);
-        return createNewRecordButton.isDisplayed();
+    public boolean isCreateNewBranchDisplayed(){
+        waitForElementToBeDisplayed(createNewBranchButton);
+        return createNewBranchButton.isDisplayed();
+    }
+
+    /*
+     * This Method verifies if next button is enabled
+     */
+    public boolean isNextButtonEnabled(){
+        return nextButtonForPagenavigation.isEnabled();
+    }
+
+    /*
+     * This method Clicks on Next button for Page navigation
+     */
+    public  void clickNextButton(){
+        nextButtonForPagenavigation.click();
+    }
+
+    /*
+     * This Method verifies if previous button is enabled
+     */
+    public boolean isPreviousButtonEnabled(){
+        return previousButtonForPagenavigation.isEnabled();
+    }
+
+    /*
+     * This method Clicks on previous button for Page navigation
+     */
+    public  void clickPreviousButton(){
+        previousButtonForPagenavigation.click();
+    }
+
+    /*
+     * This method verifies if createEmployee Button is Displayed
+     */
+    public boolean isCreateNewEmployeeDisplayed(){
+        waitForElementToBeDisplayed(createNewEmployeeButton);
+        return createNewEmployeeButton.isDisplayed();
     }
 
     /*

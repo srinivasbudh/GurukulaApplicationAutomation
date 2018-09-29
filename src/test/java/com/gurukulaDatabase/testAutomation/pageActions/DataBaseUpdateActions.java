@@ -28,6 +28,11 @@ public class DataBaseUpdateActions {
     }
 
     @Step
+    public void selectBranchOfEmployee(String branch){
+        databaseUpdateForm.selectValue(branch);
+    }
+
+    @Step
     public boolean isNameHasAError(){
         return databaseUpdateForm.isNameFieldErrorDisplayed();
     }
@@ -38,8 +43,13 @@ public class DataBaseUpdateActions {
     }
 
     @Step
-    public boolean isNameValueNotAnError(){
-        return databaseUpdateForm.noNameErrorIsDisplayed();
+    public boolean isNameValueNotAnError(String recordType){
+        if(recordType.equalsIgnoreCase("Branch")){
+            return databaseUpdateForm.noNameErrorIsDisplayedOnBranch();
+        }else{
+            return databaseUpdateForm.noNameErrorIsDisplayedOnStaff();
+        }
+
     }
 
     @Step
@@ -60,6 +70,12 @@ public class DataBaseUpdateActions {
     public void inputBranchData(String name,String code){
         enterNameAsInput(name);
         enterCodeAsInput(code);
+    }
+
+    @Step
+    public void inputEmployeeData(String name,String branch){
+        enterNameAsInput(name);
+        selectBranchOfEmployee(branch);
     }
 
     @Step

@@ -10,12 +10,17 @@ public class NavigationBarActions {
     private NavigationBar navigationBar;
 
     @Step
-    public void perfromLogout(){
+    public void performLogout(){
         navigationBar.clickLogout();
     }
 
     @Step
     public void navigateToBranches(){
         navigationBar.clickBranch();
+    }
+
+    @Step
+    public void navigateToStaff(){
+        navigationBar.clickStaff();
     }
 }

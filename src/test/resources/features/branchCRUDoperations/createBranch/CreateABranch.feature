@@ -6,7 +6,7 @@ Feature: Create a Branch on Gurukula application
   Scenario Outline: Verify creation of branch is successful when valid parameters are provided
     Given User is trying to create a Branch
     When Users creates a branch with details <Name> and <Code>
-    Then User <creationStatus> created with details <Name> and <Code> in database
+    Then Branch <creationStatus> created with details <Name> and <Code> in database
   @CreationOfBranchWithValidInputs
     Examples:
       | Name         | Code    |  creationStatus |

@@ -79,7 +79,7 @@ public class LoginPageStepDefinitions {
 
     @When("^Users Logout of the application$")
     public void users_Logout_of_the_application() {
-        navigationBarStep.perfromLogout();
+        navigationBarStep.performLogout();
     }
 
     @Then("^User is logged out successfully$")

@@ -1,9 +1,9 @@
 package com.gurukulaDatabase.testAutomation.pageObjects;
 
 import com.gurukulaDatabase.testAutomation.helper.BasePage;
-import net.thucydides.core.pages.components.Dropdown;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by Srinivas Budha on 9/24/2018.
@@ -39,10 +39,13 @@ public class DatabaseUpdateForm extends BasePage {
     WebElement codeLabelWithOutError;
 
     @FindBy(xpath="//div[@class='form-group']//*[@translate='gurukulaApp.branch.name']")
-    WebElement nameLabelWithOutError;
+    WebElement nameLabelWithOutErrorOnBranch;
+
+    @FindBy(xpath="//div[@class='form-group']//*[@translate='gurukulaApp.staff.name']")
+    WebElement nameLabelWithOutErrorOnStaff;
 
     @FindBy(xpath = "//select[@name='related_branch']")
-    Dropdown branchDropDown;
+    WebElement branchDropDown;
 
     /*
      * This method enters text into name field
@@ -98,8 +101,15 @@ public class DatabaseUpdateForm extends BasePage {
     /*
      * This method return NoName error is Displayed
      */
-    public boolean noNameErrorIsDisplayed(){
-        return nameLabelWithOutError.isDisplayed();
+    public boolean noNameErrorIsDisplayedOnBranch(){
+        return nameLabelWithOutErrorOnBranch.isDisplayed();
+    }
+
+    /*
+    * This method return NoName error is Displayed
+    */
+    public boolean noNameErrorIsDisplayedOnStaff(){
+        return nameLabelWithOutErrorOnStaff.isDisplayed();
     }
 
     /*
@@ -136,6 +146,7 @@ public class DatabaseUpdateForm extends BasePage {
      * This method selects Value From Dropdown
      */
     public void selectValue(String branchName){
-        branchDropDown.select(branchName);
+        Select dropDown = new Select(branchDropDown);
+        dropDown.selectByVisibleText(branchName);
     }
 }

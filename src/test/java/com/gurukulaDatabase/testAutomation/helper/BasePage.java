@@ -14,7 +14,10 @@ public class BasePage extends PageObject {
      */
     public void enterTextInto(WebElement webElement,String text){
         webElement.click();
-        webElement.sendKeys(text+Keys.TAB);
+        webElement.sendKeys(text);
+        waitForElementToBeDisplayed(webElement);
+        webElement.sendKeys(Keys.TAB);
+
     }
 
     /*
