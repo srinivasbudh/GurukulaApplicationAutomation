@@ -1,11 +1,9 @@
 package com.gurukulaDatabase.testAutomation.pageActions;
 
-import com.gurukulaDatabase.testAutomation.pageObjects.HomePage;
+
 import com.gurukulaDatabase.testAutomation.pageObjects.RegistrationPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.Steps;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Srinivas Budha on 9/23/2018.

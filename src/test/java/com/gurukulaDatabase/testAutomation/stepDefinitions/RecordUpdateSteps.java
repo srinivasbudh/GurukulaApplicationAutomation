@@ -26,7 +26,6 @@ public class RecordUpdateSteps {
       databaseUpdateStep.verifyIDFieldIsDisabled();
     }
 
-
     @When("^Users enters (.*) into Name text box$")
     public void enterNameText(String name) {
         if(name.equalsIgnoreCase("")){

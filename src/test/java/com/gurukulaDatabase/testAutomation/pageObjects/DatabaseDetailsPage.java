@@ -4,7 +4,6 @@ import com.gurukulaDatabase.testAutomation.helper.BasePage;
 import net.serenitybdd.core.annotations.findby.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 
 /**
@@ -174,6 +173,4 @@ public class DatabaseDetailsPage extends BasePage {
         waitForElementToBeDisplayed(abortDeleteButton);
         abortDeleteButton.click();
     }
-
-
 }

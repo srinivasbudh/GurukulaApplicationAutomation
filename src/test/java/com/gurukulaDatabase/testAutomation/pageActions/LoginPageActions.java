@@ -3,7 +3,6 @@ package com.gurukulaDatabase.testAutomation.pageActions;
 import com.gurukulaDatabase.testAutomation.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -11,8 +10,10 @@ import static org.junit.Assert.assertEquals;
  */
 public class LoginPageActions {
     private LoginPage loginPage;
+
     @Steps
     HomePageActions homePageActions;
+
     @Step
     public boolean isLoginPageLoaded(){
         return loginPage.isLoginPageLoaded();
@@ -74,6 +75,6 @@ public class LoginPageActions {
     public void accessLoginForm(){
         homePageActions.launch();
         homePageActions.navigateToLoginPage();
-        assertEquals("Login page assertion",true,isLoginPageLoaded());
+        assertEquals("Login page accessible assertion",true,isLoginPageLoaded());
     }
 }

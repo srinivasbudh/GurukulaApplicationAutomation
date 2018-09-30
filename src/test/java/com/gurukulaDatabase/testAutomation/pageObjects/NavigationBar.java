@@ -9,6 +9,9 @@ import org.openqa.selenium.support.FindBy;
  */
 public class NavigationBar extends BasePage {
 
+    @FindBy(xpath = "//span[@translate='global.menu.home']")
+    WebElement homeMenuOption;
+
     @FindBy(xpath="//span[@translate='global.menu.account.main']")
     WebElement accountOption;
 
@@ -52,6 +55,13 @@ public class NavigationBar extends BasePage {
     }
 
     /*
+     * This method is to click on password item of account meanu
+     */
+    public void clickHome(){
+        homeMenuOption.click();
+    }
+
+    /*
      * This method is to click on Settings item of account meanu
      */
     public void clickSettings(){
@@ -65,8 +75,8 @@ public class NavigationBar extends BasePage {
      */
     public void clickSessions(){
         accountOption.click();
-        waitForElementToBeDisplayed(settingsMenuItem);
-        settingsMenuItem.click();
+        waitForElementToBeDisplayed(sessionsMenuItem);
+        sessionsMenuItem.click();
     }
 
     /*
