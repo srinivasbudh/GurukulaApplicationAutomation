@@ -3,7 +3,7 @@ Feature: Reset password of a user and validate other fields
   This feature is to verify the UI validations of Reset Password flow
   Also to validate reset password functions
 
-  @VerifyResetPasswordForAValidEmail @Regression
+  @VerifyResetPasswordForAValidEmail @Regression @Smoke
   Scenario: Verify reset password for a valid email is successful
     Given User is accessing the Reset password form
     When User attempts to reset password for admin@localhost

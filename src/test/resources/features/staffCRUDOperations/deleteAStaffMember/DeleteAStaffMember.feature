@@ -2,7 +2,7 @@ Feature: Delete a Staff from Gurukula database
 
   In this feature all the possible flows of delete employee are verified
 
-  @VerifyDeleteEmployeeIsSuccessful @Regression
+  @VerifyDeleteEmployeeIsSuccessful @Regression @Smoke
   Scenario: Verify employee is deleted upon Clicking Delete button
     Given User is accessing all employees information
     When He attempts to delete a employee with details Resigned Employee, New York

@@ -2,7 +2,6 @@ Feature: Manage account settings
 
   In this feature all the account settings verifications are tested
 
-
   @VerifyUserCanUpdateHisDetailsFromAccountSettings @Regression
   Scenario Outline: Verify user can update his details from accountSetting
     Given User is accessing Account settings Page
@@ -26,7 +25,7 @@ Feature: Manage account settings
       |name       | Administrator  | Value Change    |
 
 
-  @VerifyPasswordChangeProcess @Regression
+  @VerifyPasswordChangeProcess @Regression @Smoke
   Scenario Outline: Verify user is able to reset his password from change password screen
     Given User is accessing change password screen
     When He attempts to change his password using <Password> and <ConfirmPassword>
