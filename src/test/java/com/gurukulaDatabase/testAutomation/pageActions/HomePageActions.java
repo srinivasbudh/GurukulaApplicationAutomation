@@ -19,7 +19,7 @@ public class HomePageActions {
 
     @Step
     public void verifyApplicationIsLaunched(){
-        assertEquals("Home Page title assertion",true,homePage.isApplicationLaunched());
+        assertEquals("Home Page title displayed assertion",true,homePage.isApplicationLaunched());
     }
 
     @Step

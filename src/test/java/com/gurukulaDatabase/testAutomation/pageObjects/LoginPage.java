@@ -71,7 +71,6 @@ public class LoginPage extends BasePage {
         authenticateButton.click();
     }
 
-
     /*
      * This Method helps in automatic Login
      * @param status Automatic Login required parameter

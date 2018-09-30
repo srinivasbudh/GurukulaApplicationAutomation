@@ -2,7 +2,7 @@ Feature: Edit Staff details on Gurukula Application
 
   In this feature we verify the if user can edit existing record
 
-  @VerifyUserCanEditAnExistingEmployeeDetails @Regression
+  @VerifyUserCanEditAnExistingEmployeeDetails @Regression @Smoke
   Scenario Outline: verify user can edit an existing EmployeeDetails
     Given User is accessing all employees information
     When he attempts to change the <Name> to <NewName>, <Branch> to <NewBranch> of a employee

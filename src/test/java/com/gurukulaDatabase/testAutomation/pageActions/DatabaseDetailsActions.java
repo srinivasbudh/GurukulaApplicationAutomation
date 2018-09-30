@@ -4,10 +4,8 @@ import com.gurukulaDatabase.testAutomation.pageObjects.DatabaseDetailsPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import org.openqa.selenium.WebElement;
-
 import java.util.Iterator;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -43,11 +41,11 @@ public class DatabaseDetailsActions {
 
     @Step
     public void verifyBranchViewIsLoaded(){
-        assertEquals("Assert if branches page is loaded",true, databaseDetailsPage.isCreateNewBranchDisplayed());
+        assertEquals("Branches page loading assertion",true, databaseDetailsPage.isCreateNewBranchDisplayed());
     }
     @Step
     public void verifyStaffViewIsLoaded(){
-        assertEquals("Assert if Staff page is loaded",true, databaseDetailsPage.isCreateNewEmployeeDisplayed());
+        assertEquals("Staff page loading assertion",true, databaseDetailsPage.isCreateNewEmployeeDisplayed());
     }
 
     @Step
@@ -87,7 +85,6 @@ public class DatabaseDetailsActions {
             Iterator<WebElement> branches = allBranches.iterator();
             while(branches.hasNext()){
                 WebElement branch = branches.next();
-                System.out.println("this is the value of branch"+branch.getText());
                 if(branch.getText().contains(name)){
                     if(branch.getText().contains(code)){
                         branchFound=branch;
@@ -112,7 +109,6 @@ public class DatabaseDetailsActions {
             Iterator<WebElement> branches = allBranches.iterator();
             while(branches.hasNext()){
                 WebElement branch = branches.next();
-                System.out.println("this is the value of branch"+branch.getText());
                 if(branch.getText().contains(name)){
                     if(branch.getText().contains(code)){
                         branchFound=true;

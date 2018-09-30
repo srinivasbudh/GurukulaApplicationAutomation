@@ -2,7 +2,6 @@ package com.gurukulaDatabase.testAutomation.pageActions;
 
 import com.gurukulaDatabase.testAutomation.pageObjects.ResetPasswordPage;
 import net.thucydides.core.annotations.Step;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -13,7 +12,7 @@ public class ResetPasswordPageActions {
 
     @Step
     public boolean verifyResetPageIsLoaded(){
-        assertEquals("Reset password Button Assertion",false,resetPasswordPage.isResetButtonEnabled());
+        assertEquals("Reset password Button is Enabled Assertion",false,resetPasswordPage.isResetButtonEnabled());
         return resetPasswordPage.isRestPasswordPageLoaded();
     }
 

@@ -2,7 +2,7 @@ Feature: Fetch a Employee from Gurukula Database
 
   In this feature we verify all the possible flows of fetch a record
 
-  @VerifyIfAUserCanFetchAEmployeeWithExistingData @Regression
+  @VerifyIfAUserCanFetchAEmployeeWithExistingData @Regression @Smoke
   Scenario Outline: : Verify user can fetch a Employee when search with a Exact value
     Given User is accessing all employees information
     When he search for a branch with existing <NameOrBranch>, <Value>

@@ -34,5 +34,4 @@ public class HomePageStepDefinitions {
     public void verifyRegistrationLinkIsDisplayed() {
        assertEquals("Verification of Registration link availability",true,homePageStep.isRegistrationLinkDisplayed());
     }
-
 }

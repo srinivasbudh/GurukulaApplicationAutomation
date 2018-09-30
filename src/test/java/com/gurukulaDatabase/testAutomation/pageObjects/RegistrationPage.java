@@ -220,7 +220,6 @@ public class RegistrationPage extends BasePage {
         return registrationEmailExistsMessage.isDisplayed();
     }
 
-
     /*
      * This Method Verifies if password mismatch occured
      */

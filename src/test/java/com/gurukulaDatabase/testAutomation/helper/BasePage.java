@@ -21,7 +21,8 @@ public class BasePage extends PageObject {
     }
 
     /*
-     * This Method makes element to wait for till element is Displayed
+     * This Method makes element to wait till element is Displayed
+     * Helps avoiding Stale Element exception
      */
     public void waitForElementToBeDisplayed(WebElement webElement){
         for(int waitCount=1;waitCount<3;waitCount++){

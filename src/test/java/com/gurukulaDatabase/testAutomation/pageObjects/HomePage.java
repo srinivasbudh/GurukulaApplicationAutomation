@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by Srinivas Budha on 9/23/2018.
  */
+
 @DefaultUrl("http://localhost:8080")
 public class HomePage extends BasePage {
 
@@ -22,6 +23,7 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath="//div[@translate='main.logged.message']")
     WebElement loginSuccessfulMessage;
+
     /*
      * This method verifies if home page is Loaded
      */
@@ -39,6 +41,7 @@ public class HomePage extends BasePage {
     /*
      * This method verify's if registration link is displayed
      */
+
     public boolean isRegistrationDisplayed(){
         return registrationLink.isDisplayed();
     }
@@ -56,6 +59,5 @@ public class HomePage extends BasePage {
     public void clickRegistrationLink(){
         registrationLink.click();
     }
-
 
 }

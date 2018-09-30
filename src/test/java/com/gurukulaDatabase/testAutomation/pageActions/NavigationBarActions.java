@@ -23,4 +23,19 @@ public class NavigationBarActions {
     public void navigateToStaff(){
         navigationBar.clickStaff();
     }
+
+    @Step
+    public void navigateToSettings(){
+        navigationBar.clickSettings();
+    }
+
+    @Step
+    public void navigateToSessions(){
+        navigationBar.clickSessions();
+    }
+
+    @Step
+    public void navigateToChangePassword(){
+        navigationBar.clickPassword();
+    }
 }
