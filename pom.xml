@@ -14,6 +14,8 @@
         <serenity.maven.version>1.9.31</serenity.maven.version>
         <serenity.cucumber.version>1.9.12</serenity.cucumber.version>
         <slf4j.version>1.7.7</slf4j.version>
+        <maven.surefire.plugin.version>2.18</maven.surefire.plugin.version>
+        <maven.compiler.plugin.Version>3.7.0</maven.compiler.plugin.Version>
     </properties>
 
     <dependencies>
@@ -53,21 +55,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18</version>
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.18</version>
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <includes>
                         <include>**/runner//*Test.java</include>
                     </includes>
-                    <reuseForks>true</reuseForks>
-                    <!--<forkCount>2</forkCount>-->
-                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
                 </configuration>
                 <executions>
                     <execution>
@@ -78,7 +77,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
@@ -103,7 +101,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>${maven.compiler.plugin.Version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
