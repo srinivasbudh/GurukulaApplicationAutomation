@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Fetch a Employee from Gurukula Database" skipped="0" tests="4" time="74.3" timestamp="2018-10-01 11:07:23"><testcase name=": Verify user can fetch a Employee when search with a Exact value"><failure message="asserrtion if record Found expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">asserrtion if record Found expected:&lt;true&gt; but was:&lt;false&gt;</failure><system-err>asserrtion if record Found expected:&lt;true&gt; but was:&lt;false&gt;&#13;
+com.gurukulaDatabase.testAutomation.stepDefinitions.RecordUpdateSteps.verifyBranchSearchSuccessful(RecordUpdateSteps.java:140)&#13;
+✽.Employee with Name, First Employee,Amsterdam is Retrieved(src/test/resources/features/staffCRUDOperations/fetchStaffDetails/FetchStaffDetails.feature:9)&#13;
+</system-err></testcase><testcase name=": Verify user can't fetch a record when search with a Partial value"/></testsuite>

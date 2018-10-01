@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Fetch a Employee from Gurukula Database",": Verify user can fetch a Employee when search with a Exact value","FAILURE","2018-10-01T23:07:23.498+02:00[Europe/Paris]","0.0","35.17"

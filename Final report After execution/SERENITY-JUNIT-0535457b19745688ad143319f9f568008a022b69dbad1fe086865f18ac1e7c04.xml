@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="3" failures="0" name="Manage account settings" skipped="0" tests="5" time="58.42" timestamp="2018-10-01 10:54:24"><testcase name="Verify user can update his details from accountSetting"><error message="Timed out after 5 seconds. Element not available&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotVisibleException">Timed out after 5 seconds. Element not available
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown</error><system-err>Timed out after 5 seconds. Element not available
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown&#13;
+com.gurukulaDatabase.testAutomation.pageObjects.AccountManagement.isSettingSuccessfulMessageDisplayed(AccountManagement.java:138)&#13;
+com.gurukulaDatabase.testAutomation.pageActions.AccountManagementActions.isSuccessfulMessageDisplayed(AccountManagementActions.java:48)&#13;
+com.gurukulaDatabase.testAutomation.stepDefinitions.AccountManagementStepDefinitions.verifyChangeSuccessfulMessage(AccountManagementStepDefinitions.java:49)&#13;
+✽.Account settings are saved successfully(src/test/resources/features/applicationManagement/manageAccountSettings/UpdateAccountSettings.feature:10)&#13;
+</system-err></testcase><testcase name="Verify user details are not updated When save button is not clicked"/><testcase name="Verify user is able to reset his password from change password screen"><error message="Timed out after 5 seconds. Element not available&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotVisibleException">Timed out after 5 seconds. Element not available
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown</error><system-err>Timed out after 5 seconds. Element not available
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown&#13;
+com.gurukulaDatabase.testAutomation.pageObjects.AccountManagement.isPasswordChangeSuccessful(AccountManagement.java:173)&#13;
+com.gurukulaDatabase.testAutomation.pageActions.AccountManagementActions.isPasswordChangeSuccessful(AccountManagementActions.java:111)&#13;
+com.gurukulaDatabase.testAutomation.stepDefinitions.AccountManagementStepDefinitions.verifyPasswordChangeStatus(AccountManagementStepDefinitions.java:78)&#13;
+✽.Password change is successful(src/test/resources/features/applicationManagement/manageAccountSettings/UpdateAccountSettings.feature:32)&#13;
+</system-err></testcase></testsuite>

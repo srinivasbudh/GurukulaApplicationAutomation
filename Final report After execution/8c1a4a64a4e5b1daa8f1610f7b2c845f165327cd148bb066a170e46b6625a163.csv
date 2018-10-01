@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Validate Input fields of Registration","Verify Login field on registration is only lower-case letters and digits","SUCCESS","2018-10-01T22:56:48.376+02:00[Europe/Paris]","0.0","33.73"
+"Validate Input fields of Registration","Verify Email field accepts only valid Registration Formats","ERROR","2018-10-01T22:57:22.106+02:00[Europe/Paris]","0.0","58.06"
+"Validate Input fields of Registration","Verify password field accepts only valid Registration Formats","ERROR","2018-10-01T22:58:20.165+02:00[Europe/Paris]","0.0","33.42"

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Fetch a Branch from Gurukula Database" skipped="0" tests="4" time="63.02" timestamp="2018-10-01 11:02:31"><testcase name=": Verify user can fetch a record when search with a Exact value"/><testcase name=": Verify user can't fetch a record when search with a Partial value"/></testsuite>

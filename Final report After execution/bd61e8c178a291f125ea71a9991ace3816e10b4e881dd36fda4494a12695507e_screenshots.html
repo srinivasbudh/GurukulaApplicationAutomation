@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Gurukula Application Automation</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="fb5ba6258c0ef697eef194fae10ade228ea7a335378cde0197c3431807a8538d.html">Edit A Branch On Gurukula Application</a></span>
+                > <span class="truncate-60"><a
+                    href="bd61e8c178a291f125ea71a9991ace3816e10b4e881dd36fda4494a12695507e.html">verify user A record is not Updated when Changes are not Saved </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-10-2018 23:02</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Edit A Branch On Gurukula Application </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In this feature we verify the if user can edit existing record
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="d66440082285f9e48332c3a51538dddc34be59223dd4d09d786654fbe10545b1.html">Branch Crud Operations
+                                    (theme)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="2b2b4899690c3b066ffacb181e3b72ea84e15552eb225705349016a831ccb914.html">Edit Branch Details
+                                    (capability)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e3f20c44edf48c42f30a67dcb3066285ed4b1b2e5f06f526bbcbcda79fdd4b06.html">Verifyuserrecordsarenotupdatedwhenchangesnotsaved
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">verify user A record is not Updated when Changes are not Saved
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given User is accessing all branches information<br>When he attempts to change the &lt;Name&gt; to &lt;NewName&gt;, &lt;Code&gt; to &lt;NewCode&gt; of a Branch<br>And Cancel the changes on Branch details form without saving<br>Then Branch is not updated with &lt;NewName&gt;, &lt;NewCode&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="fb750c8535568755534bfa0109f70d38185b3d33d772556e74e864af2d1cc587.png" title="verify user A record is not Updated when Changes are not Saved #1: {Name=HYDERABAD, NewName=SECUNDERABAD, Code=INDOF1, NewCode=HYDOF01}" width="800"/>
+                <img src="6f7eaf28c7ac781346a9043f478e31446a9fb543a03a6c1dcd1999ae49aa2489.png" title="Given User is accessing all branches information" width="800"/>
+                <img src="6f7eaf28c7ac781346a9043f478e31446a9fb543a03a6c1dcd1999ae49aa2489.png" title="Navigate to records view: branches" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="6f7eaf28c7ac781346a9043f478e31446a9fb543a03a6c1dcd1999ae49aa2489.png" title="Navigate to branches" width="800"/>
+                <img src="6f7eaf28c7ac781346a9043f478e31446a9fb543a03a6c1dcd1999ae49aa2489.png" title="Verify record view is loaded: branches" width="800"/>
+                <img src="6f7eaf28c7ac781346a9043f478e31446a9fb543a03a6c1dcd1999ae49aa2489.png" title="Verify branch view is loaded" width="800"/>
+                <img src="00639c801d1419d623af9bac77a46376b2cd561f89778f88c61c65b70850e7ab.png" title="When he attempts to change the HYDERABAD to SECUNDERABAD, INDOF1 to HYDOF01 of a Branch" width="800"/>
+                <img src="b2dda61f8ddcfe3517371bbd68673a295c4b9ab33d06cab504747d75cc4d25b9.png" title="Search for a record: HYDERABAD" width="800"/>
+                <img src="b2dda61f8ddcfe3517371bbd68673a295c4b9ab33d06cab504747d75cc4d25b9.png" title="Get record details: HYDERABAD, INDOF1" width="800"/>
+                <img src="6a55aaf1fc323dc9b82a6de23092c14a4f33cac02a31a6f4d1c86825bae2dea3.png" title="Edit a record: [[[[RemoteWebDriver: chrome on XP (210461252a33394693ab58ceb290cafd)] -&gt; xpath: //table[@class='table table-striped']/tbody]] -&gt; tag name: tr]" width="800"/>
+                <img src="00639c801d1419d623af9bac77a46376b2cd561f89778f88c61c65b70850e7ab.png" title="Input branch data: SECUNDERABAD, HYDOF01" width="800"/>
+                <img src="46f5788b83b2be88cfd99eec5d7b98bda5b2c961ee3a72045ba7883a37d42e68.png" title="Enter name as input: SECUNDERABAD" width="800"/>
+                <img src="00639c801d1419d623af9bac77a46376b2cd561f89778f88c61c65b70850e7ab.png" title="Enter code as input: HYDOF01" width="800"/>
+                <img src="d8c830ddd3e044ac61ec0d2b9787c2e2e0d00009ed333db1c3521f43fcaa45d9.png" title="And Cancel the changes on Branch details form without saving" width="800"/>
+                <img src="04968e40946774a7c0f4cf121f71733d3148c8a81a0121423757dacc90a65cf5.png" title="Cancel saving data" width="800"/>
+                <img src="fb750c8535568755534bfa0109f70d38185b3d33d772556e74e864af2d1cc587.png" title="Then Branch is not updated with SECUNDERABAD, HYDOF01" width="800"/>
+                <img src="fb750c8535568755534bfa0109f70d38185b3d33d772556e74e864af2d1cc587.png" title="Search for a record: SECUNDERABAD" width="800"/>
+                <img src="fb750c8535568755534bfa0109f70d38185b3d33d772556e74e864af2d1cc587.png" title="Verify record found: SECUNDERABAD, HYDOF01: <span class='success-color'>SUCCESS</span>" width="800"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

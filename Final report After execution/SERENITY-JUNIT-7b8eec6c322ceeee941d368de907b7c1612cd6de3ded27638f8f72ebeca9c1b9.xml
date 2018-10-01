@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Validate the View of Login form and other components" skipped="0" tests="2" time="8.51" timestamp="2018-10-01 10:55:39"><testcase name="Verify navigation to Registration is possible from Login screen"/><testcase name="Verify navigation to Reset password is possible from Login screen"/></testsuite>

@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Fetch a Employee from Gurukula Database",": Verify user can't fetch a record when search with a Partial value","SUCCESS","2018-10-01T23:07:58.663+02:00[Europe/Paris]","0.0","39.14"

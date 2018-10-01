@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Reset password of a user and validate other fields","Verify reset password for a valid email is successful","ERROR","2018-10-01T22:58:53.585+02:00[Europe/Paris]","0.0","10.24"
+"Reset password of a user and validate other fields","Verify reset password for a Invalid email is not successful","SUCCESS","2018-10-01T22:59:03.841+02:00[Europe/Paris]","0.0","5.07"
+"Reset password of a user and validate other fields","Verify Email field accepts only valid Registration Formats","ERROR","2018-10-01T22:59:08.91+02:00[Europe/Paris]","0.0","60.89"

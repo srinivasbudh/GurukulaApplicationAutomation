@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Delete a Staff from Gurukula database" skipped="0" tests="2" time="17.74" timestamp="2018-10-01 11:06:17"><testcase name="Verify employee is deleted upon Clicking Delete button"/><testcase name="Verify employee is not deleted upon Clicking Cancel button"/></testsuite>

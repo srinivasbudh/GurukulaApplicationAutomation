@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Gurukula Application Automation</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c8830a13d63368338fecc8d60e2f899af72015872e7af8544b22a0c43a95c5aa.html">Create A Branch On Gurukula Application</a></span>
+                > <span class="truncate-60"><a
+                    href="92fa5a4f17671c00109783888d4b23757c80aa3b2c495d3faf2692f3beb164b9.html">Verify creation of branch is successful when valid parameters are provided </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-10-2018 23:00</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Create A Branch On Gurukula Application </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In this feature all the possibilities of create a branch are verified
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="d66440082285f9e48332c3a51538dddc34be59223dd4d09d786654fbe10545b1.html">Branch Crud Operations
+                                    (theme)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="f40be071ed513f0ef9df49dc85ebb89bce991b241118f96245037642f8568451.html">Create Branch
+                                    (capability)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="fc2d6420251e40677856bd74dfa5f7f1bf694a7a685b13f1dda8e398f6ecaaf4.html">Creationofbranchwithvalidinputs
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="b3e13f8e737c951b12fa66d11c6189494490dcb6fb606007873137b067f56b9d.html">Creationofbranchwithinvalidname
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="c953f916d0caf7a639e5fef9526cf3d4e598cd616e889124a7101810482ec7bb.html">Verifycreationofbranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="23087ffbd24f958aa4c178bca055973c89652cbf7804fb71ae855cb8d3a40af9.html">Creationofduplicatebranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="08d94c3bfc2905a6e2dfda463678c72528a66ca39380ca1fe75bdb2925ceb98e.html">Creationofbranchwithinvalidcode
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Verify creation of branch is successful when valid parameters are provided
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given User is trying to create a Branch<br>When Users creates a branch with details &lt;Name&gt; and &lt;Code&gt;<br>Then Branch &lt;creationStatus&gt; created with details &lt;Name&gt; and &lt;Code&gt; in database</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Assertion error: Branch creation failure assertion expected:(false) but was:(true)">
+                            Assertion error: Branch creation failure assertion expected:(false) but was:(true)
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    java.lang.AssertionError
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>Branch creation failure assertion expected:&lt;false&gt; but was:&lt;true&gt;</pre>
+                                    </h5>
+                                    com.gurukulaDatabase.testAutomation.stepDefinitions.RecordUpdateSteps.verifyBranchCreated(RecordUpdateSteps.java
+                                    :101) <br>
+                                    ✽.Branch is not created with details Santa Clara and HOF1 in database(src/test/resources/features/branchCRUDOperations/createBranch/CreateABranch.feature
+                                    :9) <br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource2941169184276617016.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5f256f222005d0b37fc97ac50799140bcd02c1010348b714ff158f615b28c354.png" title="Verify creation of branch is successful when valid parameters are provided #1: {Name=Santa Clara, Code=HOF1, creationStatus=is}" width="800"/>
+                <img src="36137a8f31793c2c83f5b69aca018bf789008407833c61fd98eac0cf62c4a685.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="e8361ce9107fa952b88fda65e80262f57f0200ce834c79c12631bf9319472758.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="9ae59271b2da82d7d37a72505884002ffa63675d5ee3abd49b1cfe34dc3d67eb.png" title="Navigate to branches" width="800"/>
+                <img src="36137a8f31793c2c83f5b69aca018bf789008407833c61fd98eac0cf62c4a685.png" title="Verify ID field is disabled" width="800"/>
+                <img src="04637a13ab3acee1019f5aa03675b690d600bcf04b7a62ab414cfc9fbbfc86fe.png" title="When Users creates a branch with details Santa Clara and HOF1" width="800"/>
+                <img src="04637a13ab3acee1019f5aa03675b690d600bcf04b7a62ab414cfc9fbbfc86fe.png" title="Input branch data: Santa Clara, HOF1" width="800"/>
+                <img src="9af81206451a98d412c621f32d6786ed9a6e788f35f6e25527b0b1492cb29d73.png" title="Enter name as input: Santa Clara" width="800"/>
+                <img src="04637a13ab3acee1019f5aa03675b690d600bcf04b7a62ab414cfc9fbbfc86fe.png" title="Enter code as input: HOF1" width="800"/>
+                <img src="5f256f222005d0b37fc97ac50799140bcd02c1010348b714ff158f615b28c354.png" title="Then Branch is created with details Santa Clara and HOF1 in database" width="800"/>
+                <img src="72d74be4d303d337e0e3e4516e70958f6f6c5a1acc096827ef9c80e692ad5e55.png" title="Save data to DB" width="800"/>
+                <img src="a168487fda015e306cfa565dc61077cf86c55b1a0c5270181623adf37291a84c.png" title="Is branch view loaded" width="800"/>
+                <img src="5f256f222005d0b37fc97ac50799140bcd02c1010348b714ff158f615b28c354.png" title="Search for a record: Santa Clara" width="800"/>
+                <img src="5f256f222005d0b37fc97ac50799140bcd02c1010348b714ff158f615b28c354.png" title="Verify record found: Santa Clara, HOF1" width="800"/>
+                <img src="eb2ebef0fe54e00a5ed08ae77b10682763a48ffe2ce50719933dc18141e4da8d.png" title="Verify creation of branch is successful when valid parameters are provided #2: {Name=Amsterdam, Code=EUHOF1, creationStatus=is}" width="800"/>
+                <img src="a87529071a489380f91c6e5040b9ad9e99ca2434bfc1785139447a23ea177eb2.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="869653d41e65ff3ceb32a28791e401f911a4c48a2e9349060340ddab4187eb35.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="cfdec4d4cd830b4c0868f07d515759a0fb7c3fc727d4194f18c6b1ac9027c6c7.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="0cc33927b95109f4cd85d23220000cd4ae80f1607c0bf212b66f8fd33b78e48b.png" title="Navigate to branches" width="800"/>
+                <img src="f0271ed5349a7c561199d0443f16028b69ef7ba3c5eb93c0c894d0a0519cccd0.png" title="Verify ID field is disabled" width="800"/>
+                <img src="a42337e7abf5c615fc7fb800d92bd5bc2be68a0161c9659e1d81003cf0cf8372.png" title="When Users creates a branch with details Amsterdam and EUHOF1" width="800"/>
+                <img src="a42337e7abf5c615fc7fb800d92bd5bc2be68a0161c9659e1d81003cf0cf8372.png" title="Input branch data: Amsterdam, EUHOF1" width="800"/>
+                <img src="4ed63e3b552336c7a0a474a610e97ebaad742956fa20ba317e686575c2cd187f.png" title="Enter name as input: Amsterdam" width="800"/>
+                <img src="a42337e7abf5c615fc7fb800d92bd5bc2be68a0161c9659e1d81003cf0cf8372.png" title="Enter code as input: EUHOF1" width="800"/>
+                <img src="eb2ebef0fe54e00a5ed08ae77b10682763a48ffe2ce50719933dc18141e4da8d.png" title="Then Branch is created with details Amsterdam and EUHOF1 in database" width="800"/>
+                <img src="2019033b82538a79e2dc7d7eca5c993cb6f24765fad17e226bc748ccd6240c49.png" title="Save data to DB" width="800"/>
+                <img src="dd4b41a52430d5d3b7934a33e74c2bd9c159e42865b263cdc71b08011ce1f7c3.png" title="Is branch view loaded" width="800"/>
+                <img src="eb2ebef0fe54e00a5ed08ae77b10682763a48ffe2ce50719933dc18141e4da8d.png" title="Search for a record: Amsterdam" width="800"/>
+                <img src="eb2ebef0fe54e00a5ed08ae77b10682763a48ffe2ce50719933dc18141e4da8d.png" title="Verify record found: Amsterdam, EUHOF1" width="800"/>
+                <img src="f9a362bbbcc37558acb1e90caf2bdb5adaf437690f088ddfcb6e0b1c9f302247.png" title="Verify creation of branch is successful when valid parameters are provided #3: {Name=HYDERABAD, Code=INDOF1, creationStatus=is}" width="800"/>
+                <img src="0908ba89f0275ae16420c475912fbd5dd18a4083d191fe8797fcc31a4d6dd739.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="b6f61d24e7d0d713c615ba74cb3213a03b845c9eb83daecf48670c32c139fee8.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="cfdec4d4cd830b4c0868f07d515759a0fb7c3fc727d4194f18c6b1ac9027c6c7.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="581c20741c0208219a2290a3c5ba8cf2126c0d1aa69f82ac937c421b48a2c901.png" title="Navigate to branches" width="800"/>
+                <img src="becf78fc7780863ecddd66ef5b16be0b80fd2f7a05fb459f6ca7f40254415cf0.png" title="Verify ID field is disabled" width="800"/>
+                <img src="405aa91476c198d2f89287e0d9f1a2011f809c1b7dece4e9b35a36c2312fe77f.png" title="When Users creates a branch with details HYDERABAD and INDOF1" width="800"/>
+                <img src="405aa91476c198d2f89287e0d9f1a2011f809c1b7dece4e9b35a36c2312fe77f.png" title="Input branch data: HYDERABAD, INDOF1" width="800"/>
+                <img src="15dde6f42519a4182262c05bcd08a00e2f3469b099f5b482b6f7a89271543752.png" title="Enter name as input: HYDERABAD" width="800"/>
+                <img src="405aa91476c198d2f89287e0d9f1a2011f809c1b7dece4e9b35a36c2312fe77f.png" title="Enter code as input: INDOF1" width="800"/>
+                <img src="f9a362bbbcc37558acb1e90caf2bdb5adaf437690f088ddfcb6e0b1c9f302247.png" title="Then Branch is created with details HYDERABAD and INDOF1 in database" width="800"/>
+                <img src="d992ce92f753f6564e1c5f053aba2b73deb236234160a0a192dff3f4b189a83b.png" title="Save data to DB" width="800"/>
+                <img src="b3339b8f6c4c378bccc11c0ad429eb0099fe138349b7b886ae52f79ad1d33d81.png" title="Is branch view loaded" width="800"/>
+                <img src="f9a362bbbcc37558acb1e90caf2bdb5adaf437690f088ddfcb6e0b1c9f302247.png" title="Search for a record: HYDERABAD" width="800"/>
+                <img src="f9a362bbbcc37558acb1e90caf2bdb5adaf437690f088ddfcb6e0b1c9f302247.png" title="Verify record found: HYDERABAD, INDOF1" width="800"/>
+                <img src="b20f7e6d402f9690bde8dba45e1e1514221b8181fc7036c6d73d834b74b90c60.png" title="Verify creation of branch is successful when valid parameters are provided #4: {Name=Delete, Code=DUM02, creationStatus=is}" width="800"/>
+                <img src="be53b675e1b5f1a1e4603bb4110ed966a8827fccf8d49872837ab92d760aa9f9.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="707dd642fecdc74b223e62b6a4d1e77a9d1594dfbbc89f88aa37fd96987c02f7.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="cfdec4d4cd830b4c0868f07d515759a0fb7c3fc727d4194f18c6b1ac9027c6c7.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="8c6c3b6641d46f7eab87f6736e0861cf3625cf674f53dff8180b3339f238aa16.png" title="Navigate to branches" width="800"/>
+                <img src="be53b675e1b5f1a1e4603bb4110ed966a8827fccf8d49872837ab92d760aa9f9.png" title="Verify ID field is disabled" width="800"/>
+                <img src="f26903883eab735fc40333805ecc8896e68152cc89353d0d86c21f6938a6ea1a.png" title="When Users creates a branch with details Delete and DUM02" width="800"/>
+                <img src="f26903883eab735fc40333805ecc8896e68152cc89353d0d86c21f6938a6ea1a.png" title="Input branch data: Delete, DUM02" width="800"/>
+                <img src="a4866946fde8b72a076a7c5649b255858e7076223dbbefe75baf63416c942dda.png" title="Enter name as input: Delete" width="800"/>
+                <img src="f26903883eab735fc40333805ecc8896e68152cc89353d0d86c21f6938a6ea1a.png" title="Enter code as input: DUM02" width="800"/>
+                <img src="b20f7e6d402f9690bde8dba45e1e1514221b8181fc7036c6d73d834b74b90c60.png" title="Then Branch is created with details Delete and DUM02 in database" width="800"/>
+                <img src="9b5c5acbf082e456ebe5cbb3cd599701cc7f3b6c4460b49a3172c96dd98cf064.png" title="Save data to DB" width="800"/>
+                <img src="476ed77377f783880171ed7d2736b5b87930d606d75593e8e4cd2a40228d3c04.png" title="Is branch view loaded" width="800"/>
+                <img src="b20f7e6d402f9690bde8dba45e1e1514221b8181fc7036c6d73d834b74b90c60.png" title="Search for a record: Delete" width="800"/>
+                <img src="b20f7e6d402f9690bde8dba45e1e1514221b8181fc7036c6d73d834b74b90c60.png" title="Verify record found: Delete, DUM02" width="800"/>
+                <img src="e5ab6fdb87d0962b2a97f38ea34238ac02690fec0c045cc82fa8a560f577bbd0.png" title="Verify creation of branch is successful when valid parameters are provided #5: {Name=Chennai_new, Code=MAA, creationStatus=is not}" width="800"/>
+                <img src="ebdaa7f3038ec0a357fb4e93b9c9b8079e45e309d9e278fd193b1f41e0b3dd98.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="2d6ed78ae125ef468d102a5b4d3378109bcc3b35ba8bba219bb1e802586d1639.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="50272dbed5a207a1724ec58637f15b1904521c53167d927461e883c48ef33829.png" title="Navigate to branches" width="800"/>
+                <img src="ebdaa7f3038ec0a357fb4e93b9c9b8079e45e309d9e278fd193b1f41e0b3dd98.png" title="Verify ID field is disabled" width="800"/>
+                <img src="e5ab6fdb87d0962b2a97f38ea34238ac02690fec0c045cc82fa8a560f577bbd0.png" title="When Users creates a branch with details Chennai_new and MAA" width="800"/>
+                <img src="e5ab6fdb87d0962b2a97f38ea34238ac02690fec0c045cc82fa8a560f577bbd0.png" title="Input branch data: Chennai_new, MAA" width="800"/>
+                <img src="19fa2db17e22938ce01005b3e88296f1efe2a5acd7db973aeb671eca3bbf6e37.png" title="Enter name as input: Chennai_new" width="800"/>
+                <img src="e5ab6fdb87d0962b2a97f38ea34238ac02690fec0c045cc82fa8a560f577bbd0.png" title="Enter code as input: MAA" width="800"/>
+                <img src="e5ab6fdb87d0962b2a97f38ea34238ac02690fec0c045cc82fa8a560f577bbd0.png" title="Then Branch is not created with details Chennai_new and MAA in database" width="800"/>
+                <img src="e5ab6fdb87d0962b2a97f38ea34238ac02690fec0c045cc82fa8a560f577bbd0.png" title="Is save button enabled" width="800"/>
+                <img src="124e05164f5bba378c1efc28d0db87f4f43a7136a03f39d07dd35bab110d4b30.png" title="Verify creation of branch is successful when valid parameters are provided #6: {Name=Los Angels, Code=LAnew, creationStatus=is not}" width="800"/>
+                <img src="ebdaa7f3038ec0a357fb4e93b9c9b8079e45e309d9e278fd193b1f41e0b3dd98.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="93d68d848c36991aabbeee0665cd0bda8f6cf9215ce0e25c73a6d82614e97a57.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="50272dbed5a207a1724ec58637f15b1904521c53167d927461e883c48ef33829.png" title="Navigate to branches" width="800"/>
+                <img src="ebdaa7f3038ec0a357fb4e93b9c9b8079e45e309d9e278fd193b1f41e0b3dd98.png" title="Verify ID field is disabled" width="800"/>
+                <img src="124e05164f5bba378c1efc28d0db87f4f43a7136a03f39d07dd35bab110d4b30.png" title="When Users creates a branch with details Los Angels and LAnew" width="800"/>
+                <img src="124e05164f5bba378c1efc28d0db87f4f43a7136a03f39d07dd35bab110d4b30.png" title="Input branch data: Los Angels, LAnew" width="800"/>
+                <img src="f8c38bffeecd2524ee03652a2534a641dabc5d8f8c906eea2f6845e51b3cf791.png" title="Enter name as input: Los Angels" width="800"/>
+                <img src="124e05164f5bba378c1efc28d0db87f4f43a7136a03f39d07dd35bab110d4b30.png" title="Enter code as input: LAnew" width="800"/>
+                <img src="124e05164f5bba378c1efc28d0db87f4f43a7136a03f39d07dd35bab110d4b30.png" title="Then Branch is not created with details Los Angels and LAnew in database" width="800"/>
+                <img src="124e05164f5bba378c1efc28d0db87f4f43a7136a03f39d07dd35bab110d4b30.png" title="Is save button enabled" width="800"/>
+                <img src="ebdaa7f3038ec0a357fb4e93b9c9b8079e45e309d9e278fd193b1f41e0b3dd98.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="1e67b81d9761805c942a6e1045ce751742ee33cc1db8e9fc5c0a6aecb95626b3.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="2c02ee0f30148563e9b70f1bc22715a250db8b5426f70a95194591b34189ae6a.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="50272dbed5a207a1724ec58637f15b1904521c53167d927461e883c48ef33829.png" title="Navigate to branches" width="800"/>
+                <img src="740161d2d1259fd1f4e488b86bb091703676ec1f77574ba0c8e5f76c2390b8aa.png" title="Verify ID field is disabled" width="800"/>
+                <img src="1f8e727e10275deab0ff06ee6a09c1d5a1b7ef6ff3e763826df5f11c3d7e63b0.png" title="When Users creates a branch with details Santa Clara and HOF1" width="800"/>
+                <img src="1f8e727e10275deab0ff06ee6a09c1d5a1b7ef6ff3e763826df5f11c3d7e63b0.png" title="Input branch data: Santa Clara, HOF1" width="800"/>
+                <img src="162db2bf7650c2e7658a8bbfe65cb06e56de9fbdba0b639350f5b494b1506f98.png" title="Enter name as input: Santa Clara" width="800"/>
+                <img src="1f8e727e10275deab0ff06ee6a09c1d5a1b7ef6ff3e763826df5f11c3d7e63b0.png" title="Enter code as input: HOF1" width="800"/>
+                <img src="1f8e727e10275deab0ff06ee6a09c1d5a1b7ef6ff3e763826df5f11c3d7e63b0.png" title="Then Branch is not created with details Santa Clara and HOF1 in database" width="800"/>
+                <img src="1f8e727e10275deab0ff06ee6a09c1d5a1b7ef6ff3e763826df5f11c3d7e63b0.png" title="Is save button enabled: <span class='failing-color'>FAILURE</span>" width="800"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

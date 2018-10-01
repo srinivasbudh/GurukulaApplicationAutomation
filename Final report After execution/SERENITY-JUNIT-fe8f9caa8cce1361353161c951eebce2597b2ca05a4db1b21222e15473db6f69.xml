@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Validate UI fields of Branch creation form" skipped="0" tests="10" time="104.33" timestamp="2018-10-01 11:03:34"><testcase name="Verify Name field on Branch form accepts only Alphabets"/><testcase name="Verify Code field on Branch form accepts only Alphanumeric values"/></testsuite>

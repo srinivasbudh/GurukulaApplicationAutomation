@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Create a Staff member on Gurukula application","Verify creation of staff is successful when valid parameters are provided","SUCCESS","2018-10-01T23:05:19.168+02:00[Europe/Paris]","0.0","58.31"
+"Delete a Staff from Gurukula database","Verify employee is deleted upon Clicking Delete button","SUCCESS","2018-10-01T23:06:17.477+02:00[Europe/Paris]","0.0","9.03"
+"Edit Staff details on Gurukula Application","verify user can edit an existing EmployeeDetails","SUCCESS","2018-10-01T23:06:35.219+02:00[Europe/Paris]","0.0","23.87"
+"Fetch a Employee from Gurukula Database",": Verify user can fetch a Employee when search with a Exact value","FAILURE","2018-10-01T23:07:23.498+02:00[Europe/Paris]","0.0","35.17"

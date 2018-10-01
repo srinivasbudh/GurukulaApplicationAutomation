@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Create a Branch on Gurukula application","Verify creation of branch is successful when valid parameters are provided","FAILURE","2018-10-01T23:00:09.799+02:00[Europe/Paris]","0.0","75.87"
+"Fetch a Employee from Gurukula Database",": Verify user can fetch a Employee when search with a Exact value","FAILURE","2018-10-01T23:07:23.498+02:00[Europe/Paris]","0.0","35.17"
+"Validate all the UI fields and interactions of staff creation flow","Verify user can not access page navigation buttons when there are no buttons","FAILURE","2018-10-01T23:09:25.012+02:00[Europe/Paris]","0.0","13.66"

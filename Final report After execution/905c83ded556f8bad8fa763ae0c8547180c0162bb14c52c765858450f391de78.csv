@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register a new user","register a user on gurukula application with Valid parameters","ERROR","2018-10-01T22:55:56.001+02:00[Europe/Paris]","0.0","23.13"
+"Validate Input fields of Registration","Verify Email field accepts only valid Registration Formats","ERROR","2018-10-01T22:57:22.106+02:00[Europe/Paris]","0.0","58.06"
+"Validate Input fields of Registration","Verify password field accepts only valid Registration Formats","ERROR","2018-10-01T22:58:20.165+02:00[Europe/Paris]","0.0","33.42"
+"Reset password of a user and validate other fields","Verify reset password for a valid email is successful","ERROR","2018-10-01T22:58:53.585+02:00[Europe/Paris]","0.0","10.24"
+"Reset password of a user and validate other fields","Verify Email field accepts only valid Registration Formats","ERROR","2018-10-01T22:59:08.91+02:00[Europe/Paris]","0.0","60.89"

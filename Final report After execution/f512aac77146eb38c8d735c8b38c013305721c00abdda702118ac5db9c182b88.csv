@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Validate all the UI fields and interactions of staff creation flow","Verify Name field on Staff form accepts only Alphabets","SUCCESS","2018-10-01T23:08:37.8+02:00[Europe/Paris]","0.0","47.21"

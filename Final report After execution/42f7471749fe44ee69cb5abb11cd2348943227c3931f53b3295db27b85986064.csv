@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Verify session information is accessible","Verify active session can be Invalidated and user access is revoked","ERROR","2018-10-01T22:54:05.051+02:00[Europe/Paris]","0.0","19.29"
+"Manage account settings","Verify user can update his details from accountSetting","ERROR","2018-10-01T22:54:24.34+02:00[Europe/Paris]","0.0","28.45"
+"Manage account settings","Verify user is able to reset his password from change password screen","ERROR","2018-10-01T22:55:02.563+02:00[Europe/Paris]","0.0","20.2"
+"Register a new user","register a user on gurukula application with Valid parameters","ERROR","2018-10-01T22:55:56.001+02:00[Europe/Paris]","0.0","23.13"
+"Reset password of a user and validate other fields","Verify reset password for a valid email is successful","ERROR","2018-10-01T22:58:53.585+02:00[Europe/Paris]","0.0","10.24"
+"Create a Branch on Gurukula application","Verify creation of branch is successful when valid parameters are provided","FAILURE","2018-10-01T23:00:09.799+02:00[Europe/Paris]","0.0","75.87"
+"Fetch a Employee from Gurukula Database",": Verify user can fetch a Employee when search with a Exact value","FAILURE","2018-10-01T23:07:23.498+02:00[Europe/Paris]","0.0","35.17"
