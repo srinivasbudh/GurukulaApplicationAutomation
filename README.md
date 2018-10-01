@@ -48,7 +48,7 @@ I have used BDD Test Automation framework Using SerenityBDD. This serenity BDD i
 		mvn clean verify -Dcucumber.options="--tags @TagName" (EX: UI, Smoke, Regression)
 			
 			
-			
+**Note:** This automation by default runs in headless Chrome browser, This property can be changed in serenity.properties file by just commenting __chrome.switches__ value. Also this full execution takes around 18 minutes to Finsih. Once execution is done Reports will be generated in target folder 			
 
 This runs Cucumber features using Cucumber's JUnit runner. The `@RunWith(CucumberWithSerenity.class)` annotation on the `CucumberTestSuite`
 class tells JUnit to kick off Cucumber.
