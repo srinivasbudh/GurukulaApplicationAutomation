@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Gurukula Application Automation</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="93960b1622f4d1625153fa813d7234e67d4ee04d4f77c510cd34ead2c22e13e9.html">Fetch A Branch From Gurukula Database</a></span>
+                > <span class="truncate-60"><a
+                    href="dab7c4c3332d835add915fcaa890661ec27a29dfa2df636284335aaae7c2a9ab.html">: Verify user can't fetch a record when search with a Partial value </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-10-2018 23:02</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Fetch A Branch From Gurukula Database </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In this feature we verify all the possible flows of fetch a record
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="d66440082285f9e48332c3a51538dddc34be59223dd4d09d786654fbe10545b1.html">Branch Crud Operations
+                                    (theme)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1e824b6e156015c5a1523d71e8d0cd08a35673eb380fbe9f2a4ef7434b79b67f.html">Searchforabranchusingpartialname
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d0c02fb9cb969bbd9e2f900ec6333e01b070c6fb5e26345e9374169cfab9e68.html">Regression
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="8f3ea2deb07c6924d7356bd76316985b1bfafdfd5748c2a2f2e319190d46be90.html">Verifybranchisnotfoundwhenuserdoesapartialsearch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="43034c1888f02f1d1ed761568f5d492be7d1c217cad9cfe11a1e499caf40ee47.html">Searchforabranchusingpartailcode
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="448dfa3a05ab682d36bbd0b2c74fcb19673de14550d37bce349d6034e75f22be.html">Fetch A Branch
+                                    (capability)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">: Verify user can't fetch a record when search with a Partial value
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given User is accessing all branches information<br>When he search for a branch with existing &lt;NameOrCode&gt;, &lt;Value&gt;<br>Then No Branches are found</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="26fb4edfc6b1ef86b544f98e2aedd1a842d2de4bbff3fe96a62c96255db078f9.png" title=": Verify user can't fetch a record when search with a Partial value #1: {NameOrCode=Name, Value=Amste}" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Given User is accessing all branches information" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to records view: branches" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="2c02ee0f30148563e9b70f1bc22715a250db8b5426f70a95194591b34189ae6a.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Verify record view is loaded: branches" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Verify branch view is loaded" width="800"/>
+                <img src="26fb4edfc6b1ef86b544f98e2aedd1a842d2de4bbff3fe96a62c96255db078f9.png" title="When he search for a branch with existing Name, Amste" width="800"/>
+                <img src="26fb4edfc6b1ef86b544f98e2aedd1a842d2de4bbff3fe96a62c96255db078f9.png" title="Search for a record: Amste" width="800"/>
+                <img src="26fb4edfc6b1ef86b544f98e2aedd1a842d2de4bbff3fe96a62c96255db078f9.png" title="Then No Branches are found" width="800"/>
+                <img src="26fb4edfc6b1ef86b544f98e2aedd1a842d2de4bbff3fe96a62c96255db078f9.png" title="Get number of records" width="800"/>
+                <img src="30950574540244772353b3006935c5ad4c2a6638a9d1aa946b7f64bf6f811d9d.png" title=": Verify user can't fetch a record when search with a Partial value #2: {NameOrCode=Code, Value=EUH}" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Given User is accessing all branches information" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to records view: branches" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="2c02ee0f30148563e9b70f1bc22715a250db8b5426f70a95194591b34189ae6a.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="cfdec4d4cd830b4c0868f07d515759a0fb7c3fc727d4194f18c6b1ac9027c6c7.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Verify record view is loaded: branches" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Verify branch view is loaded" width="800"/>
+                <img src="30950574540244772353b3006935c5ad4c2a6638a9d1aa946b7f64bf6f811d9d.png" title="When he search for a branch with existing Code, EUH" width="800"/>
+                <img src="30950574540244772353b3006935c5ad4c2a6638a9d1aa946b7f64bf6f811d9d.png" title="Search for a record: EUH" width="800"/>
+                <img src="30950574540244772353b3006935c5ad4c2a6638a9d1aa946b7f64bf6f811d9d.png" title="Then No Branches are found" width="800"/>
+                <img src="30950574540244772353b3006935c5ad4c2a6638a9d1aa946b7f64bf6f811d9d.png" title="Get number of records: <span class='success-color'>SUCCESS</span>" width="800"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

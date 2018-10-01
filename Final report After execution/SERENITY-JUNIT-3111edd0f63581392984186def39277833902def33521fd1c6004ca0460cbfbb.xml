@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Delete a branch from Gurukula database" skipped="0" tests="2" time="17.88" timestamp="2018-10-01 11:01:25"><testcase name="Verify branch is deleted upon Clicking Delete button"/><testcase name="Verify branch is not deleted upon Clicking Cancel button"/></testsuite>

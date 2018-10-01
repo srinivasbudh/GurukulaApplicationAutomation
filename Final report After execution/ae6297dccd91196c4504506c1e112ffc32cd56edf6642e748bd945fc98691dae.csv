@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Authenticate valid users into the application","Verify user with Invalid credentials is not authenticated into the application","SUCCESS","2018-10-01T22:55:22.758+02:00[Europe/Paris]","0.0","5.25"
+"Authenticate valid users into the application","Verify user with valid credentials is authenticated into the application","SUCCESS","2018-10-01T22:55:28.005+02:00[Europe/Paris]","0.0","5.18"
+"Authenticate valid users into the application","Verify Logout from the application and Database is not accessible","SUCCESS","2018-10-01T22:55:33.202+02:00[Europe/Paris]","0.0","6.33"
+"Validate the View of Login form and other components","Verify navigation to Registration is possible from Login screen","SUCCESS","2018-10-01T22:55:39.53+02:00[Europe/Paris]","0.0","4.22"
+"Validate the View of Login form and other components","Verify navigation to Reset password is possible from Login screen","SUCCESS","2018-10-01T22:55:43.749+02:00[Europe/Paris]","0.0","4.3"

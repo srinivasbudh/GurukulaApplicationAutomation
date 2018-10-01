@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Themes</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script><!-- jQplot -->
+<!--[if IE]>
+<script language="javascript" type="text/javascript" src="excanvas/3/excanvas.compiled.js"></script>
+<![endif]--><link rel="stylesheet" type="text/css" href="jqplot/1.0.8/jquery.jqplot.min.css"/>
+<script type="text/javascript" src="jqplot/1.0.8/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="jqplot/1.0.8/plugins/jqplot.pieRenderer.min.js"></script>
+
+
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+        var plot1 = $.jqplot('coverage_pie_chart', [
+            [
+                ['Passing', 2],
+                ['Pending', 0],
+                ['Ignored', 0],
+                ['Failing', 0],
+                ['Errors',  3],
+                ['Compromised',  0],
+                ['Untested',  0],
+            ]
+        ], {
+            gridPadding: {top: 0, bottom: 38, left: 0, right: 0},
+            seriesColors: [
+                '#30cb23',
+                '#a2f2f2',
+                '#eeeadd',
+                '#f8001f',
+                '#fc6e1f',
+                'fuchsia',
+                'darkgrey'],
+            seriesDefaults: {
+                renderer: $.jqplot.PieRenderer,
+                trendline: {show: false},
+                rendererOptions: {padding: 8, showDataLabels: true}
+            },
+            legend: {
+                show: true,
+                placement: 'outside',
+                rendererOptions: {
+                    numberRows: 3
+                },
+                location: 's',
+                marginTop: '15px'
+            },
+            series: [
+                {label: '2 requirements tested successfully'},
+                {label: '0 requirements pending'},
+                {label: '0} requirements skipped'},
+                {label: '0} requirements with failures'},
+                {label: '3} requirements with errors'},
+                {label: '0} requirements compromised'},
+                {label: '0} requirements untested'},
+            ]
+        });
+        // Results table
+        $('#test-results-table').DataTable({
+            "order": [
+                [1, "asc"]
+            ],
+            "pageLength": 100,
+            "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]]
+        });
+
+        // Results table
+        $('#req-results-table').DataTable({
+            "order": [
+                [1, "asc"]
+            ],
+            "pageLength": 100,
+            "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]]
+        });
+
+        $('#examples-table').DataTable({
+            "order": [
+                [2, "asc"]
+            ],
+            "pageLength": 25
+        });
+        $("#requirements-tabs").tabs();
+        $("#test-tabs").tabs();
+    })
+    ;
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".read-more-link").click(function () {
+                $(this).nextAll("div.read-more-text").toggle();
+                var isrc = $(this).find("img").attr('src');
+                if (isrc == 'images/plus.png') {
+                    $(this).find("img").attr("src", function () {
+                        return "images/minus.png";
+                    });
+                } else {
+                    $(this).find("img").attr("src", function () {
+                        return "images/plus.png";
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Gurukula Application Automation</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Authentication</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-10-2018 22:55</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+                <div>
+                    <h2><i class="fa fa-book"></i> Theme
+                        :  Authentication</h2>
+
+                </div>
+
+
+                <div id="requirements-summary">
+                    <div id="coverage_pie_chart"
+                         style="margin-top:10px; margin-left:10px; width:250px; height:250px;"></div>
+                    <div id="coverage_summary">
+                        <div>
+                            <h4>Requirements Overview</h4>
+                            <table class="summary-table">
+                                <head>
+                                    <tr>
+                                        <th>Requirement Type</th>
+                                        <th>Total</th>
+                                        <th>Pass&nbsp;<i class="icon-check"></i></th>
+                                        <th>Fail&nbsp;<i class="icon-thumbs-down"></i></th>
+                                        <th>Pending&nbsp;<i class="icon-calendar"></i></th>
+                                        <th>Ignored&nbsp;<i class="icon-ban-circle"></i></th>
+                                    </tr>
+                                </head>
+                                <body>
+                                    <tr>
+                                        <td class="summary-leading-column"><a
+                                                href="#requirements-tabs">Capabilities</a></td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="summary-leading-column"><a
+                                                href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html">Features</a></td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+
+                                <tr>
+                                    <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria
+                                        (tests)</a></td>
+                                    <td>36</td>
+                                    <td>29</td>
+                                    <td>7</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                </tr>
+                                </body>
+                            </table>
+                        </div>
+
+
+
+
+
+<div>
+    <h4>Test Result Summary</h4>
+    <table class="summary-table">
+        <head>
+            <tr>
+                <th>Test Type</th>
+                <th>Total</th>
+                <th>Pass&nbsp;<i class="icon-check"/> </th>
+                <th>Fail&nbsp;<i class="icon-thumbs-down"/></th>
+                <th>Pending&nbsp;<i class="icon-calendar"/></th>
+                <th>Ignore/Skip&nbsp;<i class="icon-ban-circle"/></th>
+            </tr>
+        </head>
+        <body>
+        <tr>
+            <td class="summary-leading-column">Automated</td>
+            <td>36</td>
+            <td>29 (81%)</td>
+            <td>7 (19%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Manual</td>
+            <td>0</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total</td>
+            <td>36</td>
+            <td>29 (81%)</td>
+            <td>7 (19%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total Duration</td>
+                <td colspan="5">4 minutes 47 seconds</td>
+        </tr>
+        </body>
+    </table>
+</div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+                <div id="requirements-tabs">
+                        <ul>
+                                <li><a href="#tabs-1">
+                                    Capabilities (3)
+                                </a></li>
+                        </ul>
+                        <div id="tabs-1" class="capabilities-table">
+                            <div id="tabs-1" class="capabilities-table">
+
+
+<div id="req_list_tests" class="table">
+    <div class="test-results">
+        <table id="req-results-table">
+            <thead>
+            <tr>
+                <th width="30" class="test-results-heading">&nbsp;</th>
+                <th width="65" class="test-results-heading">ID</th>
+                <th width="525" class="test-results-heading">Capability</th>
+                    <th width="65" class="test-results-heading">Features</th>
+                <th class="test-results-heading" width="75px">Automated<br/>Tests</th>
+                    <th class="test-results-heading" width="75px">Manual<br/>Tests</th>
+
+                <th width="125px" class="test-results-heading">Test Results</th>
+
+                <th width="125px" class="test-results-heading">Working Features</th>
+            </tr>
+            <tbody>
+
+
+
+                <tr class="test-SUCCESS requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                        <span style="display:none">1</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="SUCCESS-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="68fe7485e45a999f5104c8d50f3afdcd0b1e8d157461e17120e44a8e6ad2278f.html">Login</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">2</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">5</td>
+<!--
+                    <td class="greentext requirementRowCell">5</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">100%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 125px;"
+                             title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 125px;"
+                                 title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 125px;"
+                                     title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 125px;"
+                                         title="  - Total tests: 5
+  - Passing tests: 5 (100%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 0 (0%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">100%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                        <div class="compromisedbar"
+                             style="width: 125px;"
+                             title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                            <div class="errorbar"
+                                 style="width: 125px;"
+                                 title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                <div class="failingbar"
+                                     style="width: 125px;"
+                                     title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                    <div class="passingbar"
+                                         style="width: 125px;"
+                                         title="Login:
+  - Passing Features: 2 (100%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 0
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-ERROR requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                        <span style="display:none">4</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="ERROR-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="7222397647b0087f237fed2cabf0cb876d1f1ac734e1a115e0827dfc2e35d2cb.html">Registration</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">2</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">22</td>
+<!--
+                    <td class="greentext requirementRowCell">18</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">4</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">81.8%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 125px;"
+                             title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 125px;"
+                                 title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 102px;"
+                                     title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 102px;"
+                                         title="  - Total tests: 22
+  - Passing tests: 18 (81.8%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 4 (18.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                        <div class="compromisedbar"
+                             style="width: 125px;"
+                             title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                            <div class="errorbar"
+                                 style="width: 125px;"
+                                 title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Registration:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 2
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+
+                <tr class="test-ERROR requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                        <span style="display:none">4</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="ERROR-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="da298ad858fc0c2be4b88dd1d601c1d61c6fa4dfb40ee634d5441fd608c9e05a.html">Reset password</a></span>
+
+                        <div class="requirementNarrative read-more-text"></div>
+                    </td>
+
+                        <td class="bluetext requirementRowCell">1</td>
+
+                    <td class="greentext highlighted-value requirementRowCell">9</td>
+<!--
+                    <td class="greentext requirementRowCell">6</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">3</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">66.7%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                        <div class="compromisedbar"
+                             style="width: 125px;"
+                             title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                            <div class="errorbar"
+                                 style="width: 125px;"
+                                 title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                <div class="failingbar"
+                                     style="width: 83px;"
+                                     title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    <div class="passingbar"
+                                         style="width: 83px;"
+                                         title="  - Total tests: 9
+  - Passing tests: 6 (66.7%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 3 (33.3%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (0%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">0%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                        <div class="compromisedbar"
+                             style="width: 125px;"
+                             title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                            <div class="errorbar"
+                                 style="width: 125px;"
+                                 title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                <div class="failingbar"
+                                     style="width: 0px;"
+                                     title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                    <div class="passingbar"
+                                         style="width: 0px;"
+                                         title="Reset password:
+  - Passing Features: 0 (0%
+  - Features Failing: 0 (0%
+  - Features Failing with errors: 1
+  - Compromised Features: 0
+  - Pending Features: 0
+  - Ignored or skipped Features: 0
+  - Untested Features: 0 (0%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+<table>
+    <tr>
+        <td>
+            <div><h3>Acceptance Criteria</h3></div>
+            <div id="test_list_tests" class="table">
+                <div class="test-results">
+                    <table id="test-results-table">
+                        <thead>
+                        <tr>
+                            <th width="50" class="test-results-heading">&nbsp;</th>
+                            <th width="%" class="test-results-heading">Tests</th>
+                            <th width="70" class="test-results-heading">Steps</th>
+
+                            <th width="100" class="test-results-heading">Started</th>
+                            <th width="100" class="test-results-heading">Took<br>(secs)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="58bdd1a5d8891f316668de82a7d49c969c27aca7fe8f21bd06ed0a02a45184f3.html" class="ellipsis"
+                                           title="Verify user with Invalid credentials is not authenticated into the application ">
+                                            Verify user with Invalid credentials is not authenticated into the application
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">11</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:55:22">22:55:22</td>
+
+                                <td class="SUCCESS-text">5.25</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="9ffe4e416c5661588ebcf277f33d74028f0d3ecc028488cbe143b4412422a764.html" class="ellipsis"
+                                           title="Verify user with valid credentials is authenticated into the application ">
+                                            Verify user with valid credentials is authenticated into the application
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">11</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:55:28">22:55:28</td>
+
+                                <td class="SUCCESS-text">5.18</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="0edb8a645f8e744251538b8a47b48cfdf35d2f830f25bc9fd7038333017aaa7c.html" class="ellipsis"
+                                           title="Verify Logout from the application and Database is not accessible ">
+                                            Verify Logout from the application and Database is not accessible
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">14</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:55:33">22:55:33</td>
+
+                                <td class="SUCCESS-text">6.33</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="7b8eec6c322ceeee941d368de907b7c1612cd6de3ded27638f8f72ebeca9c1b9.html" class="ellipsis"
+                                           title="Verify navigation to Registration is possible from Login screen ">
+                                            Verify navigation to Registration is possible from Login screen
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">10</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:55:39">22:55:39</td>
+
+                                <td class="SUCCESS-text">4.22</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="b5db6ba872a4d0b3d3a88e6a86939fe59ae11b1dde4e1742edbf03629d87c0f1.html" class="ellipsis"
+                                           title="Verify navigation to Reset password is possible from Login screen ">
+                                            Verify navigation to Reset password is possible from Login screen
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">10</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:55:43">22:55:43</td>
+
+                                <td class="SUCCESS-text">4.3</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="ab0dc4f277d9dc453e1a1882a2144e2fa8758a4f32a8ba60826118d6e94795bc.html" class="ellipsis"
+                                           title="Verify user registration is not possible when one of the mandatory fields are not supplied ">
+                                            Verify user registration is not possible when one of the mandatory fields are not supplied&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">15</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:55:48">22:55:48</td>
+
+                                <td class="SUCCESS-text">7.96</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="409804b50f0cc8c4f263954202a911a28fe8a278379f47f770e4ea5cbde870b5.html" class="ellipsis"
+                                           title="register a user on gurukula application with Valid parameters Element not visible exception: Timed ...">
+                                            register a user on gurukula application with Valid parameters&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">16</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-10-01 22:55:56">22:55:56</td>
+
+                                <td class="ERROR-text">23.13</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="be8c02f4547f968675e96c1deb2026f0247e5603c249367a03122459262f608e.html" class="ellipsis"
+                                           title="register a user on gurukula application with password mismatch ">
+                                            register a user on gurukula application with password mismatch&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">16</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:56:19">22:56:19</td>
+
+                                <td class="SUCCESS-text">12.56</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="28cd991ec15e458e72da1b1e1308c807a217f7f977a945836b8d968bb50f7b23.html" class="ellipsis"
+                                           title="register a user on gurukula application with Existing userName ">
+                                            register a user on gurukula application with Existing userName&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">16</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:56:31">22:56:31</td>
+
+                                <td class="SUCCESS-text">8.3</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="fa8791b5f9ce0a7ce91120592d4c8fb0c10a2ff91155de2bba1bc9ff30e06760.html" class="ellipsis"
+                                           title="register a user on gurukula application with existing Email ">
+                                            register a user on gurukula application with existing Email&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">16</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:56:39">22:56:39</td>
+
+                                <td class="SUCCESS-text">8.39</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="56db112087ad364d8bebb8f3dc660aafb6f973b75b0e5103af3530df240acfc8.html" class="ellipsis"
+                                           title="Verify Login field on registration is only lower-case letters and digits ">
+                                            Verify Login field on registration is only lower-case letters and digits&nbsp;(6  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">78</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:56:48">22:56:48</td>
+
+                                <td class="SUCCESS-text">33.73</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="ed5be2cf44c3aa4009c115ee990a7474a870238d083481fec73a3a8af35ecfea.html" class="ellipsis"
+                                           title="Verify Email field accepts only valid Registration Formats No such element exception: Timed out ...">
+                                            Verify Email field accepts only valid Registration Formats&nbsp;(7  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">89</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-10-01 22:57:22">22:57:22</td>
+
+                                <td class="ERROR-text">58.06</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="81bfb0837a94924889dec1fbbee26ebf07455fe45b2b6fddf12643796525ed02.html" class="ellipsis"
+                                           title="Verify password field accepts only valid Registration Formats No such element exception: Timed out ...">
+                                            Verify password field accepts only valid Registration Formats&nbsp;(4  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">51</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-10-01 22:58:20">22:58:20</td>
+
+                                <td class="ERROR-text">33.42</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="118e86b6623b1383e6c0d0a01cd9f63814180412b5ef59cf92a36bb835c14024.html" class="ellipsis"
+                                           title="Verify reset password for a valid email is successful Element not visible exception: Timed ...">
+                                            Verify reset password for a valid email is successful
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">12</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-10-01 22:58:53">22:58:53</td>
+
+                                <td class="ERROR-text">10.24</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="49be697c53ff24fe3dfe5abd04ba116001cf1c587e05ca7657d68fc3fd45aa8b.html" class="ellipsis"
+                                           title="Verify reset password for a Invalid email is not successful ">
+                                            Verify reset password for a Invalid email is not successful
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">12</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-10-01 22:59:03">22:59:03</td>
+
+                                <td class="SUCCESS-text">5.07</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="70087b71324faacc7ea51d52dbcf937f56217ae8e5e0de543920ddcaaea47af1.html" class="ellipsis"
+                                           title="Verify Email field accepts only valid Registration Formats No such element exception: Timed out ...">
+                                            Verify Email field accepts only valid Registration Formats&nbsp;(7  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">96</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-10-01 22:59:08">22:59:08</td>
+
+                                <td class="ERROR-text">60.89</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Gurukula Application Automation</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="38afe1b18ebf4fb3da6a2c963d3df387d94760aaf2ea772f38f3290821c571c8.html">Validate Ui Fields Of Branch Creation Form</a></span>
+                > <span class="truncate-60"><a
+                    href="802b3950c73211867444229345131f68b795736ccd9ce14dc5465775e509ec69.html">Verify Code field on Branch form accepts only Alphanumeric values </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-10-2018 23:04</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Validate Ui Fields Of Branch Creation Form </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In this feature all the UI fields of Branch creation form are validated
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="d66440082285f9e48332c3a51538dddc34be59223dd4d09d786654fbe10545b1.html">Branch Crud Operations
+                                    (theme)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="bbb06adaad4362a6c057bf796f08c7df5e79f45bf18ab61080549c2b81d4a198.html">Validate Branch Form
+                                    (capability)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e2dd1365ab09e717e622110b05dc8f6dd6942cd20c76f38a3424b870852d4f91.html">Minlengthfielderroroncreatebranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1375e6df4ba15f5f3532ab16c7888bd934f79e447e31014d057bec89321cf5d3.html">Mandatoryfielderroroncreatebranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="17577daaad2fd309e0837b76421d7c81a554f65af8961466d1a2c3c19c8c6e49.html">UI
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="c9fa6c71a357a71b60b116b3c436976bacddcf1b2a4410ca994df11e790cec53.html">Wrongpatternoncreatebranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="1d8577deb921ffe39679f9b04a6fcbebfb80bb030abd5f1b6f4550b0048d7787.html">Verifycodefieldonbranchform
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="7efdda4be5ee35807eee68df56b1fc11d4b890b3dacba2a3a1572c1ed16e450d.html">Noerroroncreatebranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="66bc20a0c91345688322edafec4488a163bada0fa63a19225a8684c4310250e8.html">Maxlengthfielderroroncreatebranch
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Verify Code field on Branch form accepts only Alphanumeric values
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">When Users enters &lt;Code&gt; into Code text box<br>Then Then Code value &lt;ValueStatus&gt; Accepted, Error Message &lt;ErrorStatus&gt; Displayed<br>And Code error field has &lt;ErrorText&gt; Message</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="Verify Code field on Branch form accepts only Alphanumeric values #1: {Code=AMS01, ValueStatus=is, ErrorStatus=is not, ErrorText=No error}" width="800"/>
+                <img src="8fd15ff0e79a10a7ddde6612d21b795627bb21471d60fd2a893ce7faf7a564a4.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="f3e6ed46a42a5bf8e1bf11ccd4e6c83bc7a2da07a4ab6dad02366fce75b733e6.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="9299443ea129207b9c0303b7299afc459e0f19d73b0437183b8f6af5c27966d7.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="518912a01d94f664bea7c1b7a0170b1140df231c6aabb31d13074048380b762c.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="4afa346a6be91e8529b62260f48dd54938a9d9d66e21c4490ae459b3c6d8f61c.png" title="Verify ID field is disabled" width="800"/>
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="When Users enters AMS01 into Code text box" width="800"/>
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="Enter code as input: AMS01" width="800"/>
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="Then Then Code value is Accepted, Error Message is not Displayed" width="800"/>
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="Is code value not an error" width="800"/>
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="And Code error field has No error Message" width="800"/>
+                <img src="4c663f7217f14a8dd89a91251a7a760f14a0aaa2d62625ac3d19002951af4445.png" title="Is code value not an error" width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="Verify Code field on Branch form accepts only Alphanumeric values #2: {Code=, ValueStatus=is not, ErrorStatus=has been, ErrorText=This field is required.}" width="800"/>
+                <img src="8fd15ff0e79a10a7ddde6612d21b795627bb21471d60fd2a893ce7faf7a564a4.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="c36b31c48b517ff9e4cb8f2531908fa6474e6139510495988c76841e26d633a1.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="cfdec4d4cd830b4c0868f07d515759a0fb7c3fc727d4194f18c6b1ac9027c6c7.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="642893c2cf3d276ebcf190f19cd15521a3e0574aefbd2bdbda621dc31137d78b.png" title="Verify ID field is disabled" width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="When Users enters  into Code text box" width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="Enter code as input:  " width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="Then Then Code value is not Accepted, Error Message has been Displayed" width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="Is code has a error" width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="And Code error field has This field is required. Message" width="800"/>
+                <img src="79fec9335c0952ed985bf527ddb18bc19008cf2214dc34c95dc0cc751f4fb627.png" title="Get code error" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="Verify Code field on Branch form accepts only Alphanumeric values #3: {Code=Ams01, ValueStatus=is not, ErrorStatus=has been, ErrorText=This field should follow pattern ^[A-Z0-9]*$.}" width="800"/>
+                <img src="8fd15ff0e79a10a7ddde6612d21b795627bb21471d60fd2a893ce7faf7a564a4.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="f3e6ed46a42a5bf8e1bf11ccd4e6c83bc7a2da07a4ab6dad02366fce75b733e6.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="2c02ee0f30148563e9b70f1bc22715a250db8b5426f70a95194591b34189ae6a.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="4afa346a6be91e8529b62260f48dd54938a9d9d66e21c4490ae459b3c6d8f61c.png" title="Verify ID field is disabled" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="When Users enters Ams01 into Code text box" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="Enter code as input: Ams01" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="Then Then Code value is not Accepted, Error Message has been Displayed" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="Is code has a error" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="And Code error field has This field should follow pattern ^[A-Z0-9]*$. Message" width="800"/>
+                <img src="b3bf91af802ac4605e3df0d01fd5cad8457f93052c4f27699f391bd4c6f4dcf7.png" title="Get code error" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="Verify Code field on Branch form accepts only Alphanumeric values #4: {Code=AMS001001011, ValueStatus=is not, ErrorStatus=has been, ErrorText=This field cannot be longer than 10 characters.}" width="800"/>
+                <img src="8fd15ff0e79a10a7ddde6612d21b795627bb21471d60fd2a893ce7faf7a564a4.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="d0232728ea555813c8c41642102d32ceb38b0af4682d8c00f1e20671c9a6c13e.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="1700889ff3f9ec20f20627f00adb4c84754a3d36eb8ccf0440da20360b8eb914.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="8fd15ff0e79a10a7ddde6612d21b795627bb21471d60fd2a893ce7faf7a564a4.png" title="Verify ID field is disabled" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="When Users enters AMS001001011 into Code text box" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="Enter code as input: AMS001001011" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="Then Then Code value is not Accepted, Error Message has been Displayed" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="Is code has a error" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="And Code error field has This field cannot be longer than 10 characters. Message" width="800"/>
+                <img src="abcce93d4c5cc899af5099889e2ccf93b074fdd7c1cb4e39b2e0a65f31f19cec.png" title="Get code error" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="Verify Code field on Branch form accepts only Alphanumeric values #5: {Code=A, ValueStatus=is not, ErrorStatus=has been, ErrorText=This field is required to be at least 2 characters.}" width="800"/>
+                <img src="8fd15ff0e79a10a7ddde6612d21b795627bb21471d60fd2a893ce7faf7a564a4.png" title="Given User is trying to create a Branch" width="800"/>
+                <img src="d0232728ea555813c8c41642102d32ceb38b0af4682d8c00f1e20671c9a6c13e.png" title="Navigate to create record form: Branch" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Launch" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="2c02ee0f30148563e9b70f1bc22715a250db8b5426f70a95194591b34189ae6a.png" title="Navigate to login page" width="800"/>
+                <img src="5c9e2591e801a57559f8487bb06aa815196e04be28a52e0ef40bb76a70bde084.png" title="Is login link displayed" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Perform valid login" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Authenticate user: admin, admin, true" width="800"/>
+                <img src="5b1240757bee060936d4ad205627793a574dd9f99532ba565d0debf2136924a2.png" title="Remember user login: true" width="800"/>
+                <img src="0bd2dc45544a457ed9561e479febdffdff5e5d93af0ce7f8d6a079031b1f5f3d.png" title="Verify login successful" width="800"/>
+                <img src="2c93621b2e1c7f0f24184299ebc6a7b1628d7d04b76dd8a098775c247019b250.png" title="Navigate to branches" width="800"/>
+                <img src="4afa346a6be91e8529b62260f48dd54938a9d9d66e21c4490ae459b3c6d8f61c.png" title="Verify ID field is disabled" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="When Users enters A into Code text box" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="Enter code as input: A" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="Then Then Code value is not Accepted, Error Message has been Displayed" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="Is code has a error" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="And Code error field has This field is required to be at least 2 characters. Message" width="800"/>
+                <img src="be448a45baa2a876caae792511008d93f93c372552c02d251ed98c5a1111e591.png" title="Get code error: <span class='success-color'>SUCCESS</span>" width="800"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.9.9</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Create a Branch on Gurukula application" skipped="0" tests="7" time="75.87" timestamp="2018-10-01 11:00:09"><testcase name="Verify creation of branch is successful when valid parameters are provided"><failure message="Branch creation failure assertion expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError">Branch creation failure assertion expected:&lt;false&gt; but was:&lt;true&gt;</failure><system-err>Branch creation failure assertion expected:&lt;false&gt; but was:&lt;true&gt;&#13;
+com.gurukulaDatabase.testAutomation.stepDefinitions.RecordUpdateSteps.verifyBranchCreated(RecordUpdateSteps.java:101)&#13;
+✽.Branch is not created with details Santa Clara and HOF1 in database(src/test/resources/features/branchCRUDOperations/createBranch/CreateABranch.feature:9)&#13;
+</system-err></testcase></testsuite>

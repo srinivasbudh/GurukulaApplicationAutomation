@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Register a new user" skipped="0" tests="5" time="60.33" timestamp="2018-10-01 10:55:48"><testcase name="Verify user registration is not possible when one of the mandatory fields are not supplied"/><testcase name="register a user on gurukula application with Valid parameters"><error message="Timed out after 5 seconds. Element not available&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotVisibleException">Timed out after 5 seconds. Element not available
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown</error><system-err>Timed out after 5 seconds. Element not available
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'KLM133721', ip: '192.168.1.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: driver.version: unknown&#13;
+com.gurukulaDatabase.testAutomation.pageObjects.RegistrationPage.isRegistrationSuccessful(RegistrationPage.java:196)&#13;
+com.gurukulaDatabase.testAutomation.pageActions.RegistrationPageActions.registrationSuccessful(RegistrationPageActions.java:104)&#13;
+com.gurukulaDatabase.testAutomation.stepDefinitions.RegistrationPageStepDefinitions.verifyRegistrationStatus(RegistrationPageStepDefinitions.java:136)&#13;
+✽.Registration is Successful with ValidParameters(src/test/resources/features/authentication/registration/RegisterANewUser.feature:20)&#13;
+</system-err></testcase><testcase name="register a user on gurukula application with password mismatch"/><testcase name="register a user on gurukula application with Existing userName"/><testcase name="register a user on gurukula application with existing Email"/></testsuite>

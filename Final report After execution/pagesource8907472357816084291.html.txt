@@ -1,0 +1,244 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Password</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css assets/styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css assets/styles/main.css -->
+        <link rel="stylesheet" href="assets/styles/main.css" />
+        <!-- endbuild -->
+    </head>
+    <body ng-app="gurukulaApp" class="ng-scope">
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div ng-show="true" class="development"></div>
+        <!-- uiView: navbar --><div ui-view="navbar" class="ng-scope"><nav class="navbar navbar-default ng-scope" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/" title="Gurukula">
+                <img style="max-width: 100px;margin-top: -25px;" src="../../../assets/images/gurukula_v3.png" alt="Gurukula" />
+        </a></div><a class="navbar-brand" href="#/" title="Gurukula">
+        </a><div class="collapse navbar-collapse" id="navbar-collapse" ng-switch="isAuthenticated()"><a class="navbar-brand" href="#/" title="Gurukula">
+            </a><ul class="nav navbar-nav nav-pills navbar-right"><a class="navbar-brand" href="#/" title="Gurukula">
+                </a><li ui-sref-active="active" class=""><a class="navbar-brand" href="#/" title="Gurukula">
+                    </a><a ui-sref="home" href="#/">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span translate="global.menu.home" class="ng-scope">Home</span>
+                    </a>
+                </li>
+                <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="dropdown pointer ng-scope">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-th-list"></span>
+                                    <span class="hidden-tablet ng-scope" translate="global.menu.entities.main">Entities</span>
+                                    <b class="caret"></b>
+                                </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ui-sref-active="active"><a ui-sref="branch" href="#/branch"><span class="glyphicon glyphicon-asterisk"></span>
+                         <span translate="global.menu.entities.branch" class="ng-scope">Branch</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="staff" href="#/staff"><span class="glyphicon glyphicon-asterisk"></span>
+                         <span translate="global.menu.entities.staff" class="ng-scope">Staff</span></a></li>
+                        <!-- JHipster will add entities to the menu here -->
+                    </ul>
+                </li><!-- end ngSwitchWhen: -->
+                <li ng-class="{active: $state.includes('account')}" class="dropdown pointer active">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" aria-expanded="false">
+                                <span>
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <span class="hidden-tablet ng-scope" translate="global.menu.account.main">Account</span>
+                                    <b class="caret"></b>
+                                </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope"><a ui-sref="settings" href="#/settings"><span class="glyphicon glyphicon-wrench"></span>
+                             <span translate="global.menu.account.settings" class="ng-scope">Settings</span></a></li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope active"><a ui-sref="password" href="#/password"><span class="glyphicon glyphicon-lock"></span>
+                             <span translate="global.menu.account.password" class="ng-scope">Password</span></a></li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope"><a ui-sref="sessions" href="#/sessions"><span class="glyphicon glyphicon-cloud"></span>
+                             <span translate="global.menu.account.sessions" class="ng-scope">Sessions</span></a></li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span>
+                             <span translate="global.menu.account.logout" class="ng-scope">Log out</span></a></li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: false -->
+
+                        <!-- ngSwitchWhen: false -->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+        <div class="container">
+            <!-- uiView: content --><div class="well ng-scope" ui-view="content"><div class="ng-scope">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 translate="password.title" translate-values="{username: 'admin'}" class="ng-scope">Password for [<b>admin</b>]</h2>
+
+            <div class="alert alert-success ng-scope ng-hide" ng-show="success" translate="password.messages.success"><strong>Password changed!</strong></div>
+            <div class="alert alert-danger ng-scope" ng-show="error" translate="password.messages.error"><strong>An error has occurred!</strong> The password could not be changed.</div>
+
+            <div class="alert alert-danger ng-scope ng-hide" ng-show="doNotMatch" translate="global.messages.error.dontmatch">The password and its confirmation do not match!</div>
+
+            <form name="form" role="form" novalidate="" ng-submit="changePassword()" show-validation="" class="ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-required ng-valid ng-valid-minlength ng-submitted">
+
+                <div class="form-group">
+                    <label translate="global.form.newpassword" class="ng-scope">New password</label>
+                    <input type="password" class="form-control ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-required ng-valid ng-valid-minlength ng-touched" name="password" placeholder="New password" ng-model="password" ng-minlength="5" ng-maxlength="50" required="" />
+                    <div ng-show="form.password.$dirty &amp;&amp; form.password.$invalid" class="ng-hide">
+                        <p class="help-block ng-scope ng-hide" ng-show="form.password.$error.required" translate="global.messages.validate.newpassword.required">Your password is required.</p>
+                        <p class="help-block ng-scope ng-hide" ng-show="form.password.$error.minlength" translate="global.messages.validate.newpassword.minlength">Your password is required to be at least 5 characters.</p>
+                        <p class="help-block ng-scope ng-hide" ng-show="form.password.$error.maxlength" translate="global.messages.validate.newpassword.maxlength">Your password cannot be longer than 50 characters.</p>
+                    </div>
+                    <div id="strength" password-to-check="password"><small translate="global.messages.validate.newpassword.strength" class="ng-scope">Password strength:</small><ul id="strengthBar"><li class="point" style="background: rgb(153, 255, 0);"></li><li class="point" style="background: rgb(153, 255, 0);"></li><li class="point" style="background: rgb(153, 255, 0);"></li><li class="point" style="background: rgb(153, 255, 0);"></li><li class="point" style="background: rgb(221, 221, 221);"></li></ul></div>
+                </div>
+                <div class="form-group">
+                    <label translate="global.form.confirmpassword" class="ng-scope">New password confirmation</label>
+                    <input type="password" class="form-control ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-required ng-valid ng-valid-minlength ng-touched" name="confirmPassword" placeholder="Confirm the new password" ng-model="confirmPassword" ng-minlength="5" ng-maxlength="50" required="" />
+                    <div ng-show="form.confirmPassword.$dirty &amp;&amp; form.confirmPassword.$invalid" class="ng-hide">
+                        <p class="help-block ng-scope ng-hide" ng-show="form.confirmPassword.$error.required" translate="global.messages.validate.confirmpassword.required">Your confirmation password is required.</p>
+                        <p class="help-block ng-scope ng-hide" ng-show="form.confirmPassword.$error.minlength" translate="global.messages.validate.confirmpassword.minlength">Your confirmation password is required to be at least 5 characters.</p>
+                        <p class="help-block ng-scope ng-hide" ng-show="form.confirmPassword.$error.maxlength" translate="global.messages.validate.confirmpassword.maxlength">Your confirmation password cannot be longer than 50 characters.</p>
+                    </div>
+                </div>
+
+                <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary ng-scope" translate="password.form.button">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+            <div class="footer">
+                <p translate="footer" class="ng-scope">Copyright © 2015. All rights reserved</p>
+            </div>
+        </div>
+
+        <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+        <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/json3/lib/json3.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+        <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+        <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+        <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/app.constants.js"></script>
+    <script src="scripts/components/auth/auth.service.js"></script>
+    <script src="scripts/components/auth/principal.service.js"></script>
+    <script src="scripts/components/auth/authority.directive.js"></script>
+    <script src="scripts/components/auth/services/account.service.js"></script>
+    <script src="scripts/components/auth/services/activate.service.js"></script>
+    <script src="scripts/components/auth/services/password.service.js"></script>
+    <script src="scripts/components/auth/services/register.service.js"></script>
+    <script src="scripts/components/form/form.directive.js"></script>
+    <script src="scripts/components/form/pager.directive.js"></script>
+    <script src="scripts/components/form/pagination.directive.js"></script>
+    <script src="scripts/components/admin/audits.service.js"></script>
+    <script src="scripts/components/admin/logs.service.js"></script>
+    <script src="scripts/components/admin/configuration.service.js"></script>
+    <script src="scripts/components/admin/monitoring.service.js"></script>
+    <script src="scripts/components/navbar/navbar.directive.js"></script>
+    <script src="scripts/components/navbar/navbar.controller.js"></script>
+    <script src="scripts/components/user/user.service.js"></script>
+    <script src="scripts/components/util/truncate.filter.js"></script>
+    <script src="scripts/components/util/base64.service.js"></script>
+    <script src="scripts/components/util/parse-links.service.js"></script>
+    <script src="scripts/components/util/dateutil.service.js"></script>
+    <script src="scripts/app/account/account.js"></script>
+    <script src="scripts/app/account/activate/activate.js"></script>
+    <script src="scripts/app/account/activate/activate.controller.js"></script>
+    <script src="scripts/app/account/login/login.js"></script>
+    <script src="scripts/app/account/login/login.controller.js"></script>
+    <script src="scripts/app/account/logout/logout.js"></script>
+    <script src="scripts/app/account/logout/logout.controller.js"></script>
+    <script src="scripts/app/account/password/password.js"></script>
+    <script src="scripts/app/account/password/password.controller.js"></script>
+    <script src="scripts/app/account/password/password.directive.js"></script>
+    <script src="scripts/app/account/register/register.js"></script>
+    <script src="scripts/app/account/register/register.controller.js"></script>
+    <script src="scripts/app/account/settings/settings.js"></script>
+    <script src="scripts/app/account/settings/settings.controller.js"></script>
+    <script src="scripts/app/account/reset/finish/reset.finish.controller.js"></script>
+    <script src="scripts/app/account/reset/finish/reset.finish.js"></script>
+    <script src="scripts/app/account/reset/request/reset.request.controller.js"></script>
+    <script src="scripts/app/account/reset/request/reset.request.js"></script>
+    <script src="scripts/app/admin/admin.js"></script>
+    <script src="scripts/app/admin/audits/audits.js"></script>
+    <script src="scripts/app/admin/audits/audits.controller.js"></script>
+    <script src="scripts/app/admin/configuration/configuration.js"></script>
+    <script src="scripts/app/admin/configuration/configuration.controller.js"></script>
+    <script src="scripts/app/admin/docs/docs.js"></script>
+    <script src="scripts/app/admin/health/health.js"></script>
+    <script src="scripts/app/admin/health/health.controller.js"></script>
+    <script src="scripts/app/admin/logs/logs.js"></script>
+    <script src="scripts/app/admin/logs/logs.controller.js"></script>
+    <script src="scripts/app/admin/metrics/metrics.js"></script>
+    <script src="scripts/app/admin/metrics/metrics.controller.js"></script>
+    <script src="scripts/app/entities/entity.js"></script>
+    <script src="scripts/app/error/error.js"></script>
+    <script src="scripts/app/main/main.js"></script>
+    <script src="scripts/app/main/main.controller.js"></script>
+    <script src="scripts/components/language/language.service.js"></script>
+    <script src="scripts/components/language/language.controller.js"></script>
+    <script src="scripts/components/auth/services/sessions.service.js"></script>
+    <script src="scripts/components/auth/provider/auth.session.service.js"></script>
+    <script src="scripts/app/account/sessions/sessions.js"></script>
+    <script src="scripts/app/account/sessions/sessions.controller.js"></script>
+    <script src="scripts/app/admin/tracker/tracker.js"></script>
+    <script src="scripts/app/admin/tracker/tracker.controller.js"></script>
+    <script src="scripts/components/tracker/tracker.service.js"></script>
+    <script src="scripts/app/entities/branch/branch.js"></script>
+    <script src="scripts/app/entities/branch/branch.controller.js"></script>
+    <script src="scripts/app/entities/branch/branch-detail.controller.js"></script>
+    <script src="scripts/components/entities/branch/branch.service.js"></script>
+    <script src="scripts/components/entities/branch/branch.search.service.js"></script>
+    <script src="scripts/app/entities/staff/staff.js"></script>
+    <script src="scripts/app/entities/staff/staff.controller.js"></script>
+    <script src="scripts/app/entities/staff/staff-detail.controller.js"></script>
+    <script src="scripts/components/entities/staff/staff.service.js"></script>
+    <script src="scripts/components/entities/staff/staff.search.service.js"></script>
+    <!-- endbuild -->
+
+
+</body></html>

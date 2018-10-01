@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Validate all the UI fields and interactions of staff creation flow","Verify user can not access page navigation buttons when there are no buttons","FAILURE","2018-10-01T23:09:25.012+02:00[Europe/Paris]","0.0","13.66"

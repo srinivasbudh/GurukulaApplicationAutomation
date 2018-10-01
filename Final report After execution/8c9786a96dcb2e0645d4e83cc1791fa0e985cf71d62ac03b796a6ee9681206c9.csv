@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Validate Input fields of Registration","Verify Login field on registration is only lower-case letters and digits","SUCCESS","2018-10-01T22:56:48.376+02:00[Europe/Paris]","0.0","33.73"

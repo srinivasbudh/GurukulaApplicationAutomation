@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Gurukula Application accessibility","Verify application is Launched and initial screen is loaded properly","SUCCESS","2018-10-01T22:53:54.665+02:00[Europe/Paris]","0.0","10.39"
+"Validate the View of Login form and other components","Verify navigation to Registration is possible from Login screen","SUCCESS","2018-10-01T22:55:39.53+02:00[Europe/Paris]","0.0","4.22"
+"Validate the View of Login form and other components","Verify navigation to Reset password is possible from Login screen","SUCCESS","2018-10-01T22:55:43.749+02:00[Europe/Paris]","0.0","4.3"
+"Validate Input fields of Registration","Verify Login field on registration is only lower-case letters and digits","SUCCESS","2018-10-01T22:56:48.376+02:00[Europe/Paris]","0.0","33.73"
+"Validate UI fields of Branch creation form","Verify Name field on Branch form accepts only Alphabets","SUCCESS","2018-10-01T23:03:34.84+02:00[Europe/Paris]","0.0","51.76"
+"Validate UI fields of Branch creation form","Verify Code field on Branch form accepts only Alphanumeric values","SUCCESS","2018-10-01T23:04:26.603+02:00[Europe/Paris]","0.0","52.57"
+"Validate all the UI fields and interactions of staff creation flow","Verify Name field on Staff form accepts only Alphabets","SUCCESS","2018-10-01T23:08:37.8+02:00[Europe/Paris]","0.0","47.21"

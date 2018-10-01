@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Validate UI fields of Branch creation form","Verify Name field on Branch form accepts only Alphabets","SUCCESS","2018-10-01T23:03:34.84+02:00[Europe/Paris]","0.0","51.76"

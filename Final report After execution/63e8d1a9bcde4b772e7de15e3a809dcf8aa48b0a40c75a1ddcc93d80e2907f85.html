@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script>
+    <script class="code" type="text/javascript">$(document).ready(function () {
+
+        // Results table
+        $('#tag-list-table').DataTable( {
+            "order": [
+                [ 1, "asc" ]
+            ],
+            "pageLength": 25
+        } );
+
+        $("test-list").tabs();
+    });
+    </script>
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Gurukula Application Automation</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs"><a href="index.html">Home</a> 
+                <span class="truncate-60">Capabilities</span>
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="fa fa-comments-o"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-10-2018 23:10</span>
+    <br style="clear:left"/>
+</div>
+
+
+
+   <div class="clr"></div>
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+                <table>
+                 <tr>
+                   <td>
+                    <div id="test-list">
+                        <ul>
+                            <li><a href="test-list-1">Capabilities</a></li>
+                        </ul>
+                    </div>
+                    <div id="test-list-1" class="table">
+                        <div class="test-results">
+                            <table id="tag-list-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30" class="test-results-heading">&nbsp;</th>
+                                        <th width="750" class="test-results-heading">Capability</th>
+                                        <th width="70" class="test-results-heading">Tests</th>
+                                        <th width="70" class="test-results-heading">Steps</th>
+                                        <th width="65" class="test-results-heading">Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Access session information</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="af64d1edb472c27e48ddddac959f07abcff7f078f4e6eaa12fe2e3e4a17d4558.html">Access Session Information</a></td>
+
+                                        <td class="lightgreentext">1</td>
+                                        <td class="lightgreentext">18</td>
+
+                                        <td class="lightgreentext">19.289</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Manage account settings</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="46de37d0d07621bb3813b82800e4ea2d756bd7441238931970a71c2ab42f9552.html">Manage Account Settings</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">93</td>
+
+                                        <td class="lightgreentext">58.418</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Manage account settings</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="46de37d0d07621bb3813b82800e4ea2d756bd7441238931970a71c2ab42f9552.html">Manage Account Settings</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">93</td>
+
+                                        <td class="lightgreentext">58.418</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Manage account settings</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="46de37d0d07621bb3813b82800e4ea2d756bd7441238931970a71c2ab42f9552.html">Manage Account Settings</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">93</td>
+
+                                        <td class="lightgreentext">58.418</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Login</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="68fe7485e45a999f5104c8d50f3afdcd0b1e8d157461e17120e44a8e6ad2278f.html">Login</a></td>
+
+                                        <td class="lightgreentext">3</td>
+                                        <td class="lightgreentext">36</td>
+
+                                        <td class="lightgreentext">16.756</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Login</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="68fe7485e45a999f5104c8d50f3afdcd0b1e8d157461e17120e44a8e6ad2278f.html">Login</a></td>
+
+                                        <td class="lightgreentext">3</td>
+                                        <td class="lightgreentext">36</td>
+
+                                        <td class="lightgreentext">16.756</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Login</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="68fe7485e45a999f5104c8d50f3afdcd0b1e8d157461e17120e44a8e6ad2278f.html">Login</a></td>
+
+                                        <td class="lightgreentext">3</td>
+                                        <td class="lightgreentext">36</td>
+
+                                        <td class="lightgreentext">16.756</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Registration</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="7222397647b0087f237fed2cabf0cb876d1f1ac734e1a115e0827dfc2e35d2cb.html">Registration</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">79</td>
+
+                                        <td class="lightgreentext">60.332</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Registration</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="7222397647b0087f237fed2cabf0cb876d1f1ac734e1a115e0827dfc2e35d2cb.html">Registration</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">79</td>
+
+                                        <td class="lightgreentext">60.332</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Registration</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="7222397647b0087f237fed2cabf0cb876d1f1ac734e1a115e0827dfc2e35d2cb.html">Registration</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">79</td>
+
+                                        <td class="lightgreentext">60.332</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Registration</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="7222397647b0087f237fed2cabf0cb876d1f1ac734e1a115e0827dfc2e35d2cb.html">Registration</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">79</td>
+
+                                        <td class="lightgreentext">60.332</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Registration</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="7222397647b0087f237fed2cabf0cb876d1f1ac734e1a115e0827dfc2e35d2cb.html">Registration</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">79</td>
+
+                                        <td class="lightgreentext">60.332</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Reset password</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="da298ad858fc0c2be4b88dd1d601c1d61c6fa4dfb40ee634d5441fd608c9e05a.html">Reset Password</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">24</td>
+
+                                        <td class="lightgreentext">15.309</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Reset password</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-ERROR">
+                                        <td><span class="summary-icon"/><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span><span style="display:none">ERROR</span></td>
+                                        <td class="ERROR-text"><a href="da298ad858fc0c2be4b88dd1d601c1d61c6fa4dfb40ee634d5441fd608c9e05a.html">Reset Password</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">24</td>
+
+                                        <td class="lightgreentext">15.309</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Create branch</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-FAILURE">
+                                        <td><span class="summary-icon"/><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span><span style="display:none">FAILURE</span></td>
+                                        <td class="FAILURE-text"><a href="f40be071ed513f0ef9df49dc85ebb89bce991b241118f96245037642f8568451.html">Create Branch</a></td>
+
+                                        <td class="lightgreentext">7</td>
+                                        <td class="lightgreentext">152</td>
+
+                                        <td class="lightgreentext">75.866</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Delete a branch</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="0534196392a762e1f05c78365264813781a0f6698ef63557bb491b646a8fb621.html">Delete A Branch</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">42</td>
+
+                                        <td class="lightgreentext">17.881</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Delete a branch</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="0534196392a762e1f05c78365264813781a0f6698ef63557bb491b646a8fb621.html">Delete A Branch</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">42</td>
+
+                                        <td class="lightgreentext">17.881</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Edit branch details</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="2b2b4899690c3b066ffacb181e3b72ea84e15552eb225705349016a831ccb914.html">Edit Branch Details</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">53</td>
+
+                                        <td class="lightgreentext">48.271</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Edit branch details</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="2b2b4899690c3b066ffacb181e3b72ea84e15552eb225705349016a831ccb914.html">Edit Branch Details</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">53</td>
+
+                                        <td class="lightgreentext">48.271</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Fetch a branch</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="448dfa3a05ab682d36bbd0b2c74fcb19673de14550d37bce349d6034e75f22be.html">Fetch A Branch</a></td>
+
+                                        <td class="lightgreentext">4</td>
+                                        <td class="lightgreentext">76</td>
+
+                                        <td class="lightgreentext">63.023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Fetch a branch</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="448dfa3a05ab682d36bbd0b2c74fcb19673de14550d37bce349d6034e75f22be.html">Fetch A Branch</a></td>
+
+                                        <td class="lightgreentext">4</td>
+                                        <td class="lightgreentext">76</td>
+
+                                        <td class="lightgreentext">63.023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Create staff member</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="392dcfa6a1873db493307b9238ced71d6dba0c5ceb189d90c41405c0e173bcab.html">Create Staff Member</a></td>
+
+                                        <td class="lightgreentext">5</td>
+                                        <td class="lightgreentext">108</td>
+
+                                        <td class="lightgreentext">58.309</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Delete a staff member</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="e7485f269b90e735ecd5dcf4ac0201450a685bb274e5f537373551661e26654e.html">Delete A Staff Member</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">42</td>
+
+                                        <td class="lightgreentext">17.742</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Delete a staff member</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="e7485f269b90e735ecd5dcf4ac0201450a685bb274e5f537373551661e26654e.html">Delete A Staff Member</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">42</td>
+
+                                        <td class="lightgreentext">17.742</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Edit existing staff details</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="6b492f28ae5edffc1703fa1eeade7fe1e99d4edffc2d4b1ecbe1c46c6e3d7957.html">Edit Existing Staff Details</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">51</td>
+
+                                        <td class="lightgreentext">48.279</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Edit existing staff details</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-SUCCESS">
+                                        <td><span class="summary-icon"/><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span><span style="display:none">SUCCESS</span></td>
+                                        <td class="SUCCESS-text"><a href="6b492f28ae5edffc1703fa1eeade7fe1e99d4edffc2d4b1ecbe1c46c6e3d7957.html">Edit Existing Staff Details</a></td>
+
+                                        <td class="lightgreentext">2</td>
+                                        <td class="lightgreentext">51</td>
+
+                                        <td class="lightgreentext">48.279</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Fetch staff details</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-FAILURE">
+                                        <td><span class="summary-icon"/><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span><span style="display:none">FAILURE</span></td>
+                                        <td class="FAILURE-text"><a href="1ddcd585ee5f23ebcc3992c97e5814bcc85f3ba5be4f81eb37aa435c12c63b69.html">Fetch Staff Details</a></td>
+
+                                        <td class="lightgreentext">4</td>
+                                        <td class="lightgreentext">76</td>
+
+                                        <td class="lightgreentext">74.302</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><h3>Fetch staff details</h3></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                    <tr class="test-FAILURE">
+                                        <td><span class="summary-icon"/><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span><span style="display:none">FAILURE</span></td>
+                                        <td class="FAILURE-text"><a href="1ddcd585ee5f23ebcc3992c97e5814bcc85f3ba5be4f81eb37aa435c12c63b69.html">Fetch Staff Details</a></td>
+
+                                        <td class="lightgreentext">4</td>
+                                        <td class="lightgreentext">76</td>
+
+                                        <td class="lightgreentext">74.302</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   </td>
+                  </tr>
+                 </table>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter"></div>
+
+</body>
+</html>
