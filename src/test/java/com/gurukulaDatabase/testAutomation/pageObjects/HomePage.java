@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
  * Created by Srinivas Budha on 9/23/2018.
  */
 
-@DefaultUrl("http://localhost:8080")
 public class HomePage extends BasePage {
 
     @FindBy(xpath="//h1[@translate='main.title']")
